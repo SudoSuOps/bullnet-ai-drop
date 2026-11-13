@@ -188,3 +188,25 @@ footer a{text-underline-offset:3px}
 .gap{display:grid;gap:22px}
 .gap-s{display:grid;gap:12px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}#pkt{transition:none}}
+
+/* ---------- Does It Pencil? ---------- */
+.drophead{padding:clamp(40px,6vw,80px) 0 clamp(32px,5vw,56px)}
+.drophead h1{font-size:clamp(2.1rem,6.4vw,5rem)}
+.drophead .idx{flex-wrap:wrap}
+.drophead .idx a{color:var(--platinum);text-underline-offset:3px}
+.dropgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,280px);gap:clamp(28px,5vw,72px);align-items:start}
+@media(max-width:900px){.dropgrid{grid-template-columns:1fr}.mascot{max-width:220px}}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.tiles>div{background:var(--graphite);padding:18px 20px;display:grid;gap:4px;align-content:start;border-top:2px solid var(--platinum)}
+.tiles strong{font-family:var(--display);font-stretch:112%;font-weight:800;font-size:clamp(1.8rem,3.6vw,2.6rem);line-height:1.05;font-variant-numeric:tabular-nums}
+.rowh{font:inherit;text-transform:none;letter-spacing:0;white-space:normal;color:#AEB6BE}
+.pull{font-family:var(--display);font-stretch:112%;font-weight:800;text-transform:uppercase;font-size:clamp(1.2rem,2.6vw,1.9rem);line-height:1.1;max-width:24ch;text-wrap:balance}
+.mascot{border:1px solid var(--line);background:var(--graphite)}
+.mascot img{display:block;width:100%;height:auto}
+.mascot figcaption{padding:10px 12px;border-top:1px solid var(--line)}
+.droplist{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+.droplist a{display:grid;gap:10px;padding:clamp(20px,3vw,36px);background:var(--obsidian);text-decoration:none}
+.droplist a:hover{background:var(--graphite)}
+.droplist h2{font-size:clamp(1.5rem,3.4vw,2.6rem)}
+.droplist p{color:#C4CAD0}
+.droplist a>span:last-child{color:var(--lime)}

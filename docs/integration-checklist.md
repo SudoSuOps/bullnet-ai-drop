@@ -7,7 +7,7 @@ Nothing below is done by the code in this repository. Each item needs a named ow
 - [ ] "Former national industrial team leadership" and "institutional investment sales" claims
 - [ ] "Existing infrastructure" label on founder-owned compute
 - [ ] Authorized founder photograph (the page shows a reserved frame)
-- [ ] Public contact address for "Start a conversation" (currently links to the intake form)
+- [x] Public contact details: build@bullnet.ai, 561.532.7120, @bullnetai on X (added 2026-11-13)
 
 ## Legal review
 - [ ] Footer disclosures: not a brokerage, fund, placement agent or investment adviser

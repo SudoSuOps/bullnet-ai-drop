@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     images: [{ url: '/og.png', width: 1200, height: 630, alt: 'BullNet' }],
   },
-  twitter: { card: 'summary_large_image', title: 'BullNet | The Last Mile of Intelligence', description: DESCRIPTION, images: ['/og.png'] },
+  twitter: { card: 'summary_large_image', site: '@bullnetai', title: 'BullNet | The Last Mile of Intelligence', description: DESCRIPTION, images: ['/og.png'] },
 };
 
 export const viewport: Viewport = { themeColor: '#0B0F14', colorScheme: 'dark' };
@@ -38,6 +38,9 @@ const ORGANIZATION = {
   url: SITE_URL,
   logo: `${SITE_URL}/assets/brand/bullnet-b-app-icon.svg`,
   description: DESCRIPTION,
+  email: 'build@bullnet.ai',
+  telephone: '+1-561-532-7120',
+  sameAs: ['https://x.com/bullnetai'],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

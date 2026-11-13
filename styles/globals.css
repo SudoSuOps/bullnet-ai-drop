@@ -177,6 +177,10 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--brass);outline-o
 footer{padding:48px 0 64px;color:var(--steel);font-size:.84rem}
 footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:32px}
 footer p{margin-bottom:10px}
+.contact{display:flex;flex-wrap:wrap;gap:10px 32px}
+.contact a{text-transform:none;letter-spacing:.02em;font-size:.9rem;text-decoration:none;border-bottom:1px solid var(--steel);margin-left:8px}
+.contact a:hover{border-color:var(--platinum)}
+footer a{text-underline-offset:3px}
 .gap{display:grid;gap:22px}
 .gap-s{display:grid;gap:12px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}#pkt{transition:none}}

@@ -1,0 +1,54 @@
+# BullNet
+
+> BullNet is private commercial real estate (CRE) intelligence infrastructure. It designs, builds, deploys and evaluates specialized AI systems for family offices, private capital and industrial property owners: private AI agents, local model inference on founder-operated bare-metal compute, domain-specific datasets and deterministic evaluation of results.
+
+Website: https://bullnet.ai
+Contact: build@bullnet.ai, +1 561 532 7120, https://x.com/bullnetai
+
+## Key facts
+
+- BullNet is a CRE service provider and AI systems engineering operation. It is independent and founder-led.
+- Primary audience: family offices and private capital. Secondary: industrial asset owners, logistics and cold storage operators, CRE investment firms, asset managers.
+- Practice areas: industrial, cold chain, logistics and last mile, capital markets, family office systems.
+- The founder has approximately 30 years of commercial real estate transaction experience and approximately $8 billion in historical transaction volume. These figures describe the founder's prior career, are approximate and are not independently audited.
+- BullNet runs on privately controlled bare-metal compute that the founder owns and operates.
+
+## What BullNet is not
+
+- Not a real estate brokerage. It does not list, market or sell property.
+- Not a fund, securities placement agent or investment adviser. It does not guarantee investment results.
+- Not a hyperscale cloud or a GPU rental platform.
+- Not a token project. It sells no tokens or tokenized investments.
+- Its AI agents are software workers. They are not licensed professionals and do not make fiduciary decisions.
+
+## The system
+
+Eight connected components. Except where noted, these are proposed capabilities that are validated per deployment.
+
+- The Swarm: specialized AI agents, each with a written mandate, authorized data sources, approved tools and human escalation rules.
+- The Hive: private domain knowledge, separated into BullNet datasets, public and licensed information, client confidential information and generated work products.
+- The Node: a sovereign edge AI appliance for local inference and private data processing. A design concept; no hardware specifications are published.
+- The Vault: a policy and authorization framework for confidential client data. Not a regulated escrow service.
+- Sovereign ID: cryptographic identity for devices, agents, mandates and work products. ENS names are being explored as optional public anchors. ENS is not access control.
+- The Flight Sheet: the standard work specification and evidence package for each engagement.
+- Defendable: the evaluation layer. Statuses are mathematically verified, evidence supported, inconclusive, failed, and requires human review.
+- Capital Intelligence: underwriting, capital structure, sensitivity, discounted cash flow, cap-rate and lease analysis as decision support.
+
+## Pages
+
+- [Home](https://bullnet.ai/): the full site, including the system explorer and a browser-side valuation check
+- [The system](https://bullnet.ai/#system)
+- [The Vault](https://bullnet.ai/#vault)
+- [Sovereign ID](https://bullnet.ai/#sovereign-id)
+- [The Node](https://bullnet.ai/#node)
+- [Defendable](https://bullnet.ai/#defendable)
+- [Industry expertise](https://bullnet.ai/#expertise)
+- [Flight Sheet intake](https://bullnet.ai/#flight-sheet)
+- [Founder](https://bullnet.ai/#founder)
+- [Questions and answers](https://bullnet.ai/#faq)
+
+## Notes for accurate answers
+
+- Figures in the on-page valuation demonstration are hypothetical. They are not client transactions.
+- Example identity names such as bullnet-example.eth are placeholders, not live names.
+- BullNet publishes no prices, benchmarks, certifications, client names or partner names.

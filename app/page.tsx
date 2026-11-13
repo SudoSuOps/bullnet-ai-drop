@@ -12,6 +12,7 @@ import { Expertise } from '@/components/Expertise';
 import { FlightSheetSection } from '@/components/flight-sheet/FlightSheetSection';
 import { Founder } from '@/components/Founder';
 import { Services } from '@/components/Services';
+import { Faq } from '@/components/Faq';
 import { FinalCta } from '@/components/FinalCta';
 import { Footer } from '@/components/Footer';
 
@@ -34,6 +35,7 @@ export default function Home() {
           <FlightSheetSection />
           <Founder />
           <Services />
+          <Faq />
           <FinalCta />
         </ValidatorProvider>
       </main>

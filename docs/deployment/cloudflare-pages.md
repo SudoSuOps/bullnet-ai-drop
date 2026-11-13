@@ -23,11 +23,25 @@ Pages project → Custom domains → Set up a domain → `bullnet.ai`, then add 
 
 No Content-Security-Policy is set yet. Next.js emits inline bootstrap scripts, so a strict CSP needs hashes or nonces. Decide on this before launch (see the integration checklist).
 
-## 4. Intake endpoint (optional, later)
+## 4. Intake form email (Resend)
 
-The form reads `NEXT_PUBLIC_INTAKE_ENDPOINT` at build time. Leave it unset until an approved endpoint exists. When it is set, the form sends a JSON POST and reports success only on a 2xx response.
+The form posts to `/api/intake`, a Pages Function in `functions/api/intake.ts`. It validates the request and sends one email through Resend. Cloudflare picks the function up automatically from the `functions` directory.
 
-A Pages Function at `functions/api/intake.ts` is one way to provide that endpoint on the same domain. It is not included: it needs a decision on where requests are stored or forwarded, spam protection (for example Turnstile) and a retention policy.
+One-time setup in the Pages project → Settings → Variables and Secrets (Production, and Preview if wanted):
+
+| Name | Type | Value |
+| --- | --- | --- |
+| `RESEND_API_KEY` | Secret | A Resend API key with sending access for `bullnet.ai` |
+| `INTAKE_TO` | Text, optional | Defaults to `build@bullnet.ai` |
+| `INTAKE_FROM` | Text, optional | Defaults to `BullNet Flight Sheet <flightsheet@bullnet.ai>` |
+
+Redeploy after adding the secret. Until the key is set the function answers 503 and the form tells the visitor the request was not sent.
+
+Protections in the function: same-origin check, JSON only, size and length limits, required-field and email validation, a honeypot field, and header-injection stripping. It stores nothing.
+
+Recommended next: a Cloudflare rate limiting rule on `/api/intake` (for example 5 requests per minute per IP), and Turnstile if spam appears.
+
+Never put the Resend key in the repository, in `.env.production` or in any `NEXT_PUBLIC_` variable.
 
 ## 5. Previews
 

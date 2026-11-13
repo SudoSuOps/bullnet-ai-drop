@@ -40,6 +40,7 @@ styles/globals.css       design system: tokens, type, components
 public/assets/brand/     master B, wordmark, lockups (SVG)
 public/assets/social/    social banners (SVG)
 public/_headers          Cloudflare Pages security and cache headers
+functions/api/intake.ts  Pages Function: intake form email through Resend
 docs/                    brand, security, deployment, integration checklist
 ```
 
@@ -50,7 +51,7 @@ docs/                    brand, security, deployment, integration checklist
 | Validator (section 08) | Real arithmetic, runs in the browser, unit tested. Not a deployed model evaluator. |
 | Evidence receipt (section 06) | Real SHA-256 digest of the payload shown. No signature: the site holds no key. Names are hypothetical. |
 | Sample Flight Sheet (section 10) | Hypothetical figures driven by the validator inputs. |
-| Intake form | Validates in the browser. Sends nothing until `NEXT_PUBLIC_INTAKE_ENDPOINT` is set to an approved endpoint. |
+| Intake form | Posts to `/api/intake` (Cloudflare Pages Function), which emails the request through Resend. Reports success only when Resend accepts the message. Needs the `RESEND_API_KEY` secret in Cloudflare. |
 | Vault, Sovereign ID, Node, Swarm, Hive | Proposed capabilities and design concepts, labelled as such on the page. |
 
 ## Before launch
@@ -65,4 +66,4 @@ Read [docs/security/trust-rules.md](docs/security/trust-rules.md) before changin
 
 - Separate routes (`/family-office`, `/industrial`, `/cold-chain`, `/logistics`, `/capital-markets`, `/the-system`, `/the-node`, `/the-vault`, `/sovereign-id`, `/defendable`, `/flight-sheet`, `/about`, `/contact`). Everything is on `/` today.
 - Tailwind CSS. The design system is plain CSS with custom properties, which kept the dependency list to Next, React and three font packages.
-- Server-backed intake, authorized photography, Node concept views beyond the front elevation.
+- Authorized photography, Node concept views beyond the front elevation.

@@ -15,7 +15,10 @@ export function Intake() {
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const controls = Array.from(e.currentTarget.querySelectorAll<Control>('input,select,textarea'));
+    const form = e.currentTarget;
+    // The honeypot is excluded from validation and sent separately. People never see it.
+    const controls = Array.from(form.querySelectorAll<Control>('input,select,textarea')).filter((el) => el.name !== 'website');
+    const trap = form.querySelector<HTMLInputElement>('input[name="website"]')?.value ?? '';
     const errs: Record<string, string> = {};
     let first: Control | null = null;
     for (const el of controls) {
@@ -32,7 +35,7 @@ export function Intake() {
     const text = 'BULLNET FLIGHT SHEET REQUEST (DRAFT)\n\n' + Object.entries(fields).map(([k, val]) => `${k}: ${val}`).join('\n');
     if (!ENDPOINT) { setOut({ kind: 'draft', text }); return; }
     try {
-      const res = await fetch(ENDPOINT, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(fields) });
+      const res = await fetch(ENDPOINT, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ ...fields, website: trap }) });
       setOut({ kind: res.ok ? 'sent' : 'error', text });
     } catch {
       setOut({ kind: 'error', text });
@@ -45,7 +48,7 @@ export function Intake() {
     catch { setCopyMsg('Copy was blocked. Select the text above and copy it manually.'); }
   }
   return (
-    <form className="panel" id="intake" noValidate onSubmit={onSubmit}><div className="ph mono"><span>Engagement intake</span><span>Draft only</span></div>
+    <form className="panel" id="intake" noValidate onSubmit={onSubmit}><div className="ph mono"><span>Engagement intake</span><span>No documents</span></div>
             <div className="pb fields">
               <label htmlFor="fOrg">Organization<input id="fOrg" aria-invalid={!!err.fOrg} name="Organization" required autoComplete="organization" /><span className="err" id="fOrg-e">{err.fOrg}</span></label>
               <label htmlFor="fName">Contact name<input id="fName" aria-invalid={!!err.fName} name="Contact name" required autoComplete="name" /><span className="err" id="fName-e">{err.fName}</span></label>
@@ -57,13 +60,17 @@ export function Intake() {
               <label htmlFor="fConf">Confidentiality requirements<select id="fConf" aria-invalid={!!err.fConf} name="Confidentiality requirements" required><option value="">Select</option><option>NDA required before any discussion</option><option>NDA required before sharing documents</option><option>Existing agreement in place</option><option>To be discussed</option></select><span className="err" id="fConf-e">{err.fConf}</span></label>
               <label htmlFor="fPref">Preferred contact method<select id="fPref" aria-invalid={!!err.fPref} name="Preferred contact method" required><option value="">Select</option><option>Email</option><option>Phone call</option><option>Video call</option></select><span className="err" id="fPref-e">{err.fPref}</span></label>
               <p className="steel" style={{ fontSize: '.84rem', textTransform: 'none' }}>No document upload is offered here by design. Confidential files move only after an agreement and an approved channel are in place.</p>
-              <button className="btn" type="submit">Prepare Flight Sheet request</button>
+              <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: 1, height: 1, overflow: 'hidden' }}>
+            <label htmlFor="fWebsite">Leave this field empty<input id="fWebsite" name="website" type="text" tabIndex={-1} autoComplete="off" /></label>
+          </div>
+          {ENDPOINT && (<p className="steel" style={{ fontSize: '.84rem', textTransform: 'none' }}>Submitting emails these details to BullNet.</p>)}
+          <button className="btn" type="submit">{ENDPOINT ? 'Send Flight Sheet request' : 'Prepare Flight Sheet request'}</button>
               <div role="status" className="gap-s">
     {out && (
     <>
     {out.kind === 'draft' && (<p style={{ color: 'var(--review)' }}><strong>Not sent.</strong> This build has no approved submission endpoint, so nothing has left your browser and BullNet has not received this request.</p>)}
-    {out.kind === 'error' && (<p style={{ color: 'var(--fail)' }}><strong>Not sent.</strong> The submission endpoint did not accept the request. Your draft is below.</p>)}
-    {out.kind === 'sent' && (<p><strong>Submitted.</strong> The intake endpoint accepted this request.</p>)}
+    {out.kind === 'error' && (<p style={{ color: 'var(--fail)' }}><strong>Not sent.</strong> The request could not be delivered. Your draft is below. You can copy it and email build@bullnet.ai.</p>)}
+    {out.kind === 'sent' && (<p><strong>Sent.</strong> Your request was emailed to BullNet. A copy of what you sent is below.</p>)}
     <pre className="receipt">{out.text}</pre>
     <button className="btn ghost sm" type="button" onClick={copy}>Copy draft</button>
     <span className="steel" style={{ fontSize: '.84rem' }}>{copyMsg}</span>

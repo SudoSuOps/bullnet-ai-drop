@@ -13,10 +13,11 @@ Nothing below is done by the code in this repository. Each item needs a named ow
 - [ ] Footer disclosures: not a brokerage, fund, placement agent or investment adviser
 - [ ] Vault wording: "not a regulated escrow service"; contract vs technical policy vs custody
 - [ ] Trademark clearance of the B mark and the BULLNET name before filings or print
-- [ ] Privacy notice and terms once the intake form sends data anywhere
+- [ ] **Privacy notice: now due.** The intake form sends personal contact details by email
 
 ## Security and deployment validation
-- [ ] Approved intake endpoint, with spam protection and a retention policy
+- [x] Intake endpoint built (`/api/intake`, Resend). Needs `RESEND_API_KEY` set as a secret in Cloudflare
+- [ ] Rate limiting rule on `/api/intake`; retention policy for intake emails
 - [ ] Content-Security-Policy decision (see deployment guide)
 - [ ] Cloudflare Access on preview deployments until launch
 - [ ] Any Vault, Sovereign ID or Node control is implemented and tested before the site describes it as operational

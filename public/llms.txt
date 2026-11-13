@@ -1,14 +1,16 @@
 # BullNet
 
-> BullNet is private commercial real estate (CRE) intelligence infrastructure. It designs, builds, deploys and evaluates specialized AI systems for family offices, private capital and industrial property owners: private AI agents, local model inference on founder-operated bare-metal compute, domain-specific datasets and deterministic evaluation of results.
+> BullNet is a private AI office. It designs, builds, deploys and evaluates private AI systems for one client and one mandate at a time: AI agents with written mandates, the client's data inside an agreed boundary, bare-metal compute the founder owns and operates, and deterministic testing of results. Commercial real estate (CRE) is its first vertical. Tagline: Your data. Your intelligence. Your next move.
 
 Website: https://bullnet.ai
 Contact: build@bullnet.ai, +1 561 532 7120, https://x.com/bullnetai
 
 ## Key facts
 
-- BullNet is a CRE service provider and AI systems engineering operation. It is independent and founder-led.
-- Primary audience: family offices and private capital. Secondary: industrial asset owners, logistics and cold storage operators, CRE investment firms, asset managers.
+- BullNet is a private AI office and AI systems engineering operation. It is independent and founder-led.
+- A private AI office is a dedicated AI operation for one principal or firm, in the way a family office is a dedicated staff for one family's capital.
+- Commercial real estate is the only vertical BullNet serves today. Others are intended, not yet offered.
+- Audience: principals and firms who want AI on their own data under their own control. Today: family offices and private capital, plus industrial asset owners, logistics and cold storage operators, CRE investment firms, asset managers.
 - Practice areas: industrial, cold chain, logistics and last mile, capital markets, family office systems.
 - The founder has approximately 30 years of commercial real estate transaction experience and approximately $8 billion in historical transaction volume. These figures describe the founder's prior career, are approximate and are not independently audited.
 - BullNet runs on privately controlled bare-metal compute that the founder owns and operates.

@@ -13,6 +13,7 @@ These are mandatory for every change to copy, content config or demos.
 - Portray agents as licensed professionals or fiduciary decision-makers
 - Describe proposed software as production-certified
 - Portray BullNet as a brokerage, a fund or a token project
+- Describe a vertical other than commercial real estate as available before it exists
 
 ## Always label which of these a claim is
 | Label on the site | Meaning |

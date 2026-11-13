@@ -15,7 +15,7 @@ export function SystemSection() {
       <div className="wrap">
         <header className="sh"><p className="idx mono"><b>04</b> The complete system</p>
           <h2>One mandate.<br />A purpose-built intelligence system.</h2>
-          <p className="lede">Eight connected components. Select one to see what it does, what enters it, what leaves it and where its trust boundary sits.</p></header>
+          <p className="lede">Think of it as an office. The Swarm is the staff, the Hive is the files, the Node is the premises, the Vault is the locked room and the Flight Sheet is the work order. Select a component to see what enters it, what leaves it and where its trust boundary sits.</p></header>
         <div className="panel"><div className="ph mono"><span>FIG. 04 / System architecture</span><span>Select a component</span></div>
           <div className="pb scroll"><ArchDiagram active={c.k} onPick={(k) => setCi(site.components.findIndex((x) => x.k === k))} /></div>
         </div>

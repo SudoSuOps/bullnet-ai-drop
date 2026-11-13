@@ -4,7 +4,7 @@ export function Difference() {
       <div className="wrap">
         <header className="sh"><p className="idx mono"><b>02</b> The difference</p>
           <h2>We don't list the asset.<br />We build the intelligence behind it.</h2>
-          <p className="lede">BullNet is a commercial real estate service provider and an AI systems engineering operation. We design, build, deploy and evaluate specialized AI systems for family offices, private capital and industrial owners. The firm is independent and founder-led, and it runs on compute the founder owns and operates.</p></header>
+          <p className="lede">BullNet is a private AI office. We design, build, deploy and evaluate AI systems for one client and one mandate at a time, on compute the founder owns and operates. We start where we have earned the right to: commercial real estate, where thirty years of transactions decide which questions the agents ask and which answers the tests refuse.</p></header>
         <div className="scroll"><table>
           <thead><tr><th scope="col"></th><th scope="col">What they provide</th><th scope="col">What BullNet provides</th></tr></thead>
           <tbody>

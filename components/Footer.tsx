@@ -2,7 +2,7 @@ export function Footer() {
   return (
     <footer>
       <div className="wrap cols">
-        <div><a className="brand" href="/" style={{ marginBottom: '14px' }}><svg width="30" height="30" viewBox="32 44 420 420" aria-hidden="true"><use href="#mark"/></svg>BULLNET</a><p>Private CRE intelligence infrastructure.<br />bullnet.ai</p>
+        <div><a className="brand" href="/" style={{ marginBottom: '14px' }}><svg width="30" height="30" viewBox="32 44 420 420" aria-hidden="true"><use href="#mark"/></svg>BULLNET</a><p>Your private AI office.<br />The last mile of intelligence.<br />bullnet.ai</p>
           <p><a href="mailto:build@bullnet.ai">build@bullnet.ai</a><br /><a href="tel:+15615327120">561.532.7120</a><br /><a href="https://x.com/bullnetai" rel="noopener">@bullnetai on X</a></p>
             <p><a href="/does-it-pencil/">Does It Pencil? Market intel</a></p></div>
         <div><p className="mono">How to read this site</p>

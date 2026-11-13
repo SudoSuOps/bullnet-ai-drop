@@ -1,6 +1,6 @@
 # BullNet.ai flagship site
 
-Private CRE intelligence infrastructure. This repository is the public marketing site: a statically exported Next.js app with no server, no database and no secrets.
+BullNet is a private AI office, with commercial real estate as its first vertical. This repository is the public marketing site: a statically exported Next.js app with no server, no database and no secrets.
 
 ## Quick start
 

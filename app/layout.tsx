@@ -11,19 +11,19 @@ import { DESCRIPTION, SITE_URL, structuredData } from '@/lib/schema';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: 'BullNet | Private CRE AI Infrastructure for Family Offices', template: '%s | BullNet' },
+  title: { default: 'BullNet | Your Private AI Office', template: '%s | BullNet' },
   description: DESCRIPTION,
   alternates: { canonical: '/' },
-  keywords: ['commercial real estate AI', 'family office AI', 'private AI agents', 'CRE underwriting', 'industrial real estate', 'cold storage', 'sovereign compute'],
+  keywords: ['private AI office', 'private AI agents', 'commercial real estate AI', 'family office AI', 'CRE underwriting', 'industrial real estate', 'cold storage', 'sovereign compute'],
   openGraph: {
     type: 'website',
     url: SITE_URL,
     siteName: 'BullNet',
-    title: 'BullNet | The Last Mile of Intelligence',
+    title: 'BullNet | Your Private AI Office',
     description: DESCRIPTION,
     images: [{ url: '/og.png', width: 1200, height: 630, alt: 'BullNet' }],
   },
-  twitter: { card: 'summary_large_image', site: '@bullnetai', title: 'BullNet | The Last Mile of Intelligence', description: DESCRIPTION, images: ['/og.png'] },
+  twitter: { card: 'summary_large_image', site: '@bullnetai', title: 'BullNet | Your Private AI Office', description: DESCRIPTION, images: ['/og.png'] },
 };
 
 export const viewport: Viewport = { themeColor: '#0B0F14', colorScheme: 'dark' };

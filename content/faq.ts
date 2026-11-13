@@ -6,11 +6,15 @@
 export const faq = [
   {
     q: 'What is BullNet?',
-    a: 'BullNet is private commercial real estate (CRE) intelligence infrastructure. It designs, builds, deploys and evaluates specialized AI systems for family offices, private capital and industrial property owners. Those systems combine private AI agents, local model inference on founder-operated bare-metal compute, domain-specific datasets and deterministic evaluation of results.',
+    a: 'BullNet is a private AI office. It designs, builds, deploys and evaluates private AI systems for one client and one mandate at a time, on bare-metal compute the founder owns and operates. Commercial real estate (CRE) is its first vertical, built on the founder\u2019s approximately 30 years of transaction experience.',
+  },
+  {
+    q: 'What is a private AI office?',
+    a: 'A private AI office is a dedicated AI operation that works for one principal or firm, the way a family office is a dedicated staff for one family\u2019s capital. It has a staff of AI agents with written mandates, a private store of the client\u2019s knowledge, an agreed place where the work runs, rules for what confidential data may be used, and tests that check each answer before a person relies on it.',
   },
   {
     q: 'Who does BullNet serve?',
-    a: 'BullNet serves family offices and private capital groups that invest in commercial real estate. It also works with industrial asset owners, logistics and cold storage operators, CRE investment firms and asset managers. It is built for principals, CIOs, CFOs, investment committee members and operating teams. It is not a product for retail investors.',
+    a: 'BullNet serves principals and firms who want AI working on their own data under their own control. Today that means family offices, private capital groups, commercial property owners, industrial and cold storage operators, CRE investment firms and asset managers. It is not a product for retail investors.',
   },
   {
     q: 'Is BullNet a commercial real estate brokerage?',

@@ -1,5 +1,21 @@
 # Brand guidelines (locked 2026-11-13)
 
+## Positioning (set 2026-11-13)
+
+**BullNet is a private AI office.** It delivers working AI in specific verticals, powered by compute it owns, built on real-world experience.
+
+| Line | Text |
+| --- | --- |
+| Headline | Your Private AI Office. |
+| Support | Your data. Your intelligence. Your next move. |
+| Thesis | The last mile of intelligence. |
+| Proof | 30 years in the trenches. Built for the agent economy. |
+
+- Commercial real estate is the first vertical and the proof. Do not describe other verticals as available until one is.
+- Family offices are an audience, not the definition of the company.
+- The office metaphor maps to the system: Swarm is staff, Hive is files, Node is premises, Vault is the locked room, Flight Sheet is the work order.
+- "Office" must never read as productivity software. Always pair it with agents, mandates and tested answers.
+
 ## One B. One identity.
 The flowing B with the diagonal crossing and the green block is the only BullNet symbol. Do not redraw it, add horns, nodes, arrows or letters to it, or create logos for individual products. The Swarm, Hive, Node, Vault, Sovereign ID, Flight Sheet, Defendable and Capital Intelligence are capabilities inside one system and are distinguished by typography, linework and layout.
 

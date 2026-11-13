@@ -210,3 +210,6 @@ footer a{text-underline-offset:3px}
 .droplist h2{font-size:clamp(1.5rem,3.4vw,2.6rem)}
 .droplist p{color:#C4CAD0}
 .droplist a>span:last-child{color:var(--lime)}
+
+/* ---------- Positioning: private AI office ---------- */
+.hero-tag{font-family:var(--display);font-stretch:112%;font-weight:700;text-transform:uppercase;font-size:clamp(1rem,2.3vw,1.7rem);line-height:1.2;letter-spacing:.01em;color:var(--steel);max-width:none;text-wrap:balance}

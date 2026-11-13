@@ -4,12 +4,13 @@ export function Hero() {
   return (
     <section className="hero">
       <div className="wrap hero-head">
-        <p className="mono brass">Private CRE Intelligence / Sovereign Infrastructure</p>
-        <h1>The last mile<br />of <em>intelligence.</em></h1>
+        <p className="mono brass">Private AI Office / Owned Compute / Tested Answers</p>
+        <h1>Your private<br />AI <em>office.</em></h1>
+        <p className="hero-tag">Your data. Your intelligence. Your next move.</p>
       </div>
       <div className="wrap hero-body">
         <div className="copy">
-          <p className="lede">Thirty years of commercial real estate experience engineered into private AI agents, domain-specific models, sovereign compute, and defensible evaluation systems for family offices.</p>
+          <p className="lede">BullNet builds and runs private AI offices. Agents work under written mandates, on your data, inside a boundary you approve, on compute we own and operate. Every answer is tested before it reaches you. Commercial real estate is our first vertical, built on thirty years of closing transactions.</p>
           <div className="cred" aria-label="Founder track record">
             <div><strong>~30 yrs</strong><span className="mono steel">CRE transactions</span></div>
             <div><strong>~$8B</strong><span className="mono steel">Historical volume closed</span></div>

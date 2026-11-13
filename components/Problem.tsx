@@ -4,7 +4,7 @@ export function Problem() {
       <div className="wrap">
         <header className="sh"><p className="idx mono"><b>03</b> The problem</p>
           <h2>The data is confidential.<br />The decision is consequential.</h2>
-          <p className="lede">A family office often holds decades of information and has little technical infrastructure for putting AI to work on it safely.</p></header>
+          <p className="lede">Most private offices hold decades of information and have little infrastructure for putting AI to work on it safely.</p></header>
         <ul className="probs">
           <li><span className="mono brass">P-01</span><h3>Fragmented documents</h3><p>Leases, rent rolls, appraisals and closing binders sit in separate folders, inboxes and advisor portals.</p></li>
           <li><span className="mono brass">P-02</span><h3>External AI exposure</h3><p>Pasting a confidential offering memorandum into a public assistant may breach the agreement that came with it.</p></li>

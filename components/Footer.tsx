@@ -1,0 +1,17 @@
+export function Footer() {
+  return (
+    <footer>
+      <div className="wrap cols">
+        <div><a className="brand" href="#top" style={{ marginBottom: '14px' }}><svg width="30" height="30" viewBox="32 44 420 420" aria-hidden="true"><use href="#mark"/></svg>BULLNET</a><p>Private CRE intelligence infrastructure.<br />bullnet.ai</p></div>
+        <div><p className="mono">How to read this site</p>
+          <p><span className="tag b">Historical experience</span> The founder's prior CRE career.</p>
+          <p><span className="tag b">Existing infrastructure</span> Compute BullNet operates today.</p>
+          <p><span className="tag b">Proposed capability</span> Designed, and validated per deployment.</p>
+          <p><span className="tag b">Illustrative demonstration</span> Example data, not a client or a live service.</p></div>
+        <div><p className="mono">Disclosures</p>
+          <p>BullNet is not a real estate brokerage, a fund, a securities placement agent or an investment adviser. It provides analytical infrastructure and decision support. Clients retain authority over their information and their decisions.</p>
+          <p>Nothing on this site is an offer of securities or a promise of investment results. AI agents are software workers. They are not licensed professionals and do not make fiduciary decisions.</p></div>
+      </div>
+    </footer>
+  );
+}

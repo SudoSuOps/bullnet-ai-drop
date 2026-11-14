@@ -6,10 +6,37 @@ import { Picker } from '@/components/Picker';
 
 type Moment = (typeof office.moments)[number];
 
-/** One moment in the day: the question, the agent-supported work, the evidence or gaps, and who decides. */
+/**
+ * One moment in the day, drawn as a private office conversation: the person asking, the agent preparing the work,
+ * the supporting evidence and any exception, and what needs a person's approval. An illustrative concept, not a screenshot.
+ */
 function MomentDetail({ m }: { m: Moment }) {
+  const role = m.who.replace('The ', '');
+  const person = role.charAt(0).toUpperCase() + role.slice(1);
   return (
-    <div className="grid2">
+    <div className="grid2 moment">
+      <figure className={m.phone ? 'ws chat phone' : 'ws chat'} aria-label={`Illustrative conversation: ${m.who.toLowerCase()} asks the ${m.desk} a question`}>
+        <div className="ph mono"><span># {m.channel}</span><span className="brass">Illustrative</span></div>
+        <ol className="chat-thread">
+          <li className="chat-msg">
+            <span className="av" aria-hidden="true">{m.initials}</span>
+            <div><p className="chat-who"><strong>{person}</strong><span className="mono">{m.time}</span></p>
+              <p>{m.ask}</p></div>
+          </li>
+          <li className="chat-status mono"><span className="dot" aria-hidden="true" />{m.desk} is preparing: {m.preparing}</li>
+          <li className="chat-msg agent">
+            <span className="av" aria-hidden="true">AI</span>
+            <div><p className="chat-who"><strong>{m.desk}</strong><span className="tag">Agent</span></p>
+              <ul className="chat-list">{m.reply.map((r) => (<li key={r}>{r}</li>))}</ul>
+              <div className="chat-block"><p className="chat-label mono">Supporting evidence</p>
+                <ul className="chips">{m.sources.map((x) => (<li key={x}>{x}</li>))}</ul></div>
+              <div className="chat-block exc"><p className="chat-label mono">Exception</p><p>{m.gap}</p></div>
+              <div className="chat-block appr"><p className="chat-label mono">Needs human approval</p><p>{m.approval}</p></div>
+            </div>
+          </li>
+        </ol>
+        <figcaption>Illustrative interface concept. Not a screenshot.</figcaption>
+      </figure>
       <dl className="kv">
         <dt>Who and where</dt><dd>{m.who}. {m.where}.</dd>
         <dt>The question</dt><dd>“{m.ask}”</dd>
@@ -17,17 +44,6 @@ function MomentDetail({ m }: { m: Moment }) {
         <dt>Evidence and gaps</dt><dd>{m.evidence}</dd>
         <dt className="approve">Human authority</dt><dd className="approve">{m.human}</dd>
       </dl>
-      <figure className={m.phone ? 'ws phone' : 'ws'} aria-label={`Illustrative example: ${m.who.toLowerCase()} asks the ${m.desk} a question`}>
-        <div className="ph mono"><span># {m.channel}</span><span className="brass">Illustrative</span></div>
-        <div className="ws-thread">
-          <div className="ws-msg"><p className="mono ws-who">{m.who.replace('The ', '')}</p><p>{m.ask}</p></div>
-          <div className="ws-msg agent"><p className="mono ws-who">{m.desk} <span className="tag">Agent</span></p>
-            <ul>{m.reply.map((r) => (<li key={r}>{r}</li>))}</ul>
-            <p className="ws-gap"><span className="mono">Gap</span> {m.gap}</p>
-            <p className="ws-wait mono">{m.waiting}</p></div>
-        </div>
-        <figcaption>Illustrative interface concept. Not a screenshot.</figcaption>
-      </figure>
     </div>
   );
 }
@@ -105,12 +121,12 @@ export function OfficeSection() {
 
         {/* 06 Chief of Staff */}
         <div className="journey">
-          <div className="panel"><div className="ph mono"><span>06 Chief of Staff</span><span className="brass">Proposed</span></div>
+          <div className="panel cos"><div className="ph mono"><span>06 Chief of Staff</span><span className="tag b big">Proposed</span></div>
             <div className="pb gap-s">
               <h3>A second set of eyes.</h3>
-              <p>Some offices will have a Chief of Staff: a senior review agent built on a separate model from the agents whose work it checks. Its intended role is to review agent work against the assignment, identify missing evidence and escalate exceptions to a person.</p>
-              <p className="approve-line">It advises and reviews. It does not make final business decisions.</p>
-              <p className="steel">Proposed capability, being tested in BullNet’s own office. It is not available as a production feature.</p>
+              <p>Before a piece of work reaches you, a second reviewer can check it. The Chief of Staff is a review agent that looks over what the other agents prepared, points out anything missing or unsupported, and flags it for a person.</p>
+              <p className="approve-line">It reviews and advises. People make the decisions.</p>
+              <p className="steel">Proposed. We are testing it in BullNet’s own office, and it is not yet available to customers.</p>
             </div></div>
         </div>
 

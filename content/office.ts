@@ -6,11 +6,11 @@
  */
 export const office = {
   receive: [
-    { name: 'A private workspace', text: 'Channels for your teams and projects, on a desk or a phone.' },
-    { name: 'Agents built for your work', text: 'Each one has a single job, a list of what it may read and a list of what it may do.' },
-    { name: 'Your information, organized', text: 'The documents and records you approve, in one place the agents can search.' },
-    { name: 'A place the work runs', text: 'Compute BullNet hosts privately, an optional Node in your building, or both.' },
-    { name: 'A team that stays', text: 'BullNet builds the office, operates it and adjusts it as your business changes.' },
+    { name: 'A private workspace', text: 'Your team’s conversations, projects and requests in one place, on a desk or a phone.' },
+    { name: 'Agents built for your work', text: 'Help with jobs you actually have, like chasing paperwork or preparing a report. Not a general chatbot.' },
+    { name: 'Your information, organized', text: 'The documents and records you approve, findable in one place, so an answer can point back to where it came from.' },
+    { name: 'A place the work runs', text: 'We bring the computing. It can be hosted privately by BullNet, sit in your building, or both. You do not need to buy hardware to start.' },
+    { name: 'A team that stays', text: 'We build it, run it and adjust it as your business changes. You are not handed software and left alone.' },
   ],
   moments: [
     {
@@ -21,6 +21,10 @@ export const office = {
       channel: 'approvals',
       ask: 'What needs me today?',
       desk: 'Operations desk',
+      initials: 'O',
+      preparing: 'Gathering what the Hiring, Operations and Project desks have ready for approval.',
+      sources: ['Interview notes', 'Supplier quotes', 'Developer’s change request'],
+      approval: 'The job offer, the purchase order and the change order response.',
       reply: [
         'Three items are waiting on your approval.',
         'A job offer for an electrician, from the Hiring desk, with the interview notes attached.',
@@ -41,6 +45,10 @@ export const office = {
       channel: 'project-desk',
       ask: 'What’s holding up Building C?',
       desk: 'Project desk',
+      initials: 'PM',
+      preparing: 'Searching the approved project records for Building C.',
+      sources: ['RFI log', 'Submittal register', 'Supplier documents'],
+      approval: 'What to chase, and what goes to the developer.',
       reply: [
         'Two requests for information are open with the developer, both about panel locations. Each links to its entry in the RFI log.',
         'One lighting submittal is past its due date, per the submittal register.',
@@ -59,6 +67,10 @@ export const office = {
       channel: 'finance-desk',
       ask: 'Is this month’s progress billing ready?',
       desk: 'Finance desk',
+      initials: 'OM',
+      preparing: 'Building the draft from the approved schedule of values and recomputing the totals.',
+      sources: ['Schedule of values', 'This month’s completed work', 'Change order log'],
+      approval: 'Review by the owner and his accountant before the billing is sent.',
       reply: [
         'A draft is ready, built from the approved schedule of values and this month’s completed work.',
         'The totals were recomputed by code and match the draft.',

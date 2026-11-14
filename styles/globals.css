@@ -375,3 +375,40 @@ footer a{text-underline-offset:3px}
 .flow li+li::before{content:"";position:absolute;left:-28px;top:50%;width:28px;height:1px;background:var(--steel)}
 @media(max-width:760px){.flow{grid-template-columns:minmax(0,1fr)}.flow li+li::before{left:50%;top:-28px;width:1px;height:28px}}
 #office .shot figcaption{font-size:.76rem;color:#B4BDC6}
+
+/* Private AI Office, readability pass and the conversation view. */
+#office .stages h3{font-size:1.02rem}
+#office .stages p{font-size:1.06rem;color:#DCE0E4}
+#office .steel{color:#BCC4CC;font-size:1.02rem}
+#office .mono.brass{font-size:.86rem}
+#office dl.kv dt{font-size:.84rem;color:#BCC4CC}
+#office dl.kv dd{font-size:1.06rem;color:#E5E8EB}
+#office .panel .ph,#office .ws .ph{font-size:.84rem;color:#BCC4CC}
+#office .ws figcaption{font-size:.96rem;color:#BCC4CC}
+#office .pick button{font-size:.82rem;padding:11px 14px}
+#office .desks-acc summary{font-size:.86rem}
+#office .moment{align-items:start}
+.chat-thread{list-style:none;margin:0;padding:clamp(16px,2.4vw,24px);display:grid;gap:18px}
+.chat-msg{display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px;align-items:start}
+.chat-msg .av{width:40px;height:40px;display:grid;place-items:center;border:1px solid var(--steel);border-radius:50%;font-family:var(--mono);font-size:.76rem;letter-spacing:.04em;color:var(--platinum);background:#1b2027}
+.chat-msg.agent .av{border-radius:6px;border-color:var(--lime);color:var(--lime)}
+.chat-msg p,.chat-msg li{font-size:1.06rem;color:#E5E8EB;line-height:1.5}
+.chat-who{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;margin-bottom:4px}
+.chat-who strong{font-weight:600;color:var(--white)}
+.chat-who .mono{font-size:.8rem;color:#BCC4CC;letter-spacing:.04em}
+.chat-list{margin:0;padding-left:18px;display:grid;gap:6px}
+.chat-status{display:flex;gap:10px;align-items:baseline;font-size:.84rem;letter-spacing:.02em;color:#BCC4CC;padding-left:52px;line-height:1.5}
+.chat-status .dot{flex:none;width:8px;height:8px;border-radius:50%;background:var(--lime);transform:translateY(-1px)}
+.chat-block{margin-top:12px;padding:10px 12px;border:1px solid var(--line);border-left:2px solid var(--steel);background:#10151b;display:grid;gap:6px}
+.chat-block.exc{border-left-color:var(--review)}
+.chat-block.appr{border-left-color:var(--platinum)}
+.chat-block.appr p:last-child{font-weight:500}
+.chat-label{font-size:.8rem !important;letter-spacing:.08em;text-transform:uppercase;color:#BCC4CC !important}
+.chat-block.exc .chat-label{color:var(--review) !important}
+.chat-block.appr .chat-label{color:var(--platinum) !important}
+.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.chips li{font-family:var(--mono);font-size:.82rem !important;letter-spacing:.02em;color:#E5E8EB;border:1px solid var(--line);padding:5px 9px;background:var(--graphite)}
+.tag.big{font-size:.84rem !important;padding:5px 12px;border-color:var(--platinum);color:var(--platinum)}
+#office .panel.cos{border-color:rgba(229,232,235,.45)}
+#office .panel.cos .pb>p{font-size:1.08rem;color:#DCE0E4;max-width:68ch}
+@media(max-width:520px){.chat-status{padding-left:0}.chat-msg{grid-template-columns:34px minmax(0,1fr)}.chat-msg .av{width:34px;height:34px}}

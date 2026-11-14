@@ -15,6 +15,11 @@ Nothing below is done by the code in this repository. Each item needs a named ow
 - [ ] Trademark clearance of the B mark and the BULLNET name before filings or print
 - [ ] **Privacy notice: now due.** The intake form sends personal contact details by email
 
+## Hive Capital Markets
+- [ ] Counsel review: licensing or registration for arranging commercial and equipment financing in each state served, limits on advance fees, and required compensation disclosures
+- [ ] Compensation disclosure wording for the page once the fee model is set (none is stated today)
+- [ ] Cloudflare: add hivecapitalmarkets.com and a 301 Redirect Rule to `https://bullnet.ai/hive-capital-markets/`
+
 ## Security and deployment validation
 - [x] Intake endpoint built (`/api/intake`, Resend). Needs `RESEND_API_KEY` set as a secret in Cloudflare
 - [ ] Rate limiting rule on `/api/intake`; retention policy for intake emails

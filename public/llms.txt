@@ -9,7 +9,8 @@ Contact: build@bullnet.ai, +1 561 532 7120, https://x.com/bullnetai
 
 - BullNet is a private AI office and AI systems engineering operation. It is independent and founder-led.
 - A private AI office is a dedicated AI operation for one principal or firm, in the way a family office is a dedicated staff for one family's capital.
-- Commercial real estate is the only vertical BullNet serves today. Others are intended, not yet offered.
+- Verticals today: commercial real estate, and equipment and hardware acquisition through Hive Capital Markets, the capital desk of BullNet.
+- Hive Capital Markets works out acquisition and financing math and prepares lender-ready packages. BullNet is not a lender; financing comes from third-party lenders.
 - Audience: principals and firms who want AI on their own data under their own control. Today: family offices and private capital, plus industrial asset owners, logistics and cold storage operators, CRE investment firms, asset managers.
 - Practice areas: industrial, cold chain, logistics and last mile, capital markets, family office systems.
 - The founder has approximately 30 years of commercial real estate transaction experience and approximately $8 billion in historical transaction volume. These figures describe the founder's prior career, are approximate and are not independently audited.
@@ -48,6 +49,7 @@ Eight connected components. Except where noted, these are proposed capabilities 
 - [Flight Sheet intake](https://bullnet.ai/#flight-sheet)
 - [Founder](https://bullnet.ai/#founder)
 - [Questions and answers](https://bullnet.ai/#faq)
+- [Hive Capital Markets](https://bullnet.ai/hive-capital-markets/): equipment acquisition math, with a payment and coverage calculator
 - [Does It Pencil?](https://bullnet.ai/does-it-pencil/): market intel series, one illustrative CRE deal structure per drop
 - [Zero cash flow deal](https://bullnet.ai/does-it-pencil/zero-cash-flow-deal/): exchanging an $85M hotel sale into zero cash flow net lease industrial
 

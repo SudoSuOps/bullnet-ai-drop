@@ -13,7 +13,8 @@ These are mandatory for every change to copy, content config or demos.
 - Portray agents as licensed professionals or fiduciary decision-makers
 - Describe proposed software as production-certified
 - Portray BullNet as a brokerage, a fund or a token project
-- Describe a vertical other than commercial real estate as available before it exists
+- Describe a vertical as available before it exists. Offered today: commercial real estate, and equipment and hardware acquisition (Hive Capital Markets)
+- Describe BullNet as a lender, quote rates, or imply approval or terms. Financing comes from third-party lenders
 
 ## Always label which of these a claim is
 | Label on the site | Meaning |

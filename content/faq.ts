@@ -41,6 +41,10 @@ export const faq = [
     a: 'BullNet has five practice areas: industrial, cold chain, logistics and last mile, capital markets, and family office systems. Typical work includes acquisition underwriting, lease abstraction, cap-rate and discounted cash flow analysis, debt and equity sensitivities, due diligence support and investment committee preparation.',
   },
   {
+    q: 'What is Hive Capital Markets?',
+    a: 'Hive Capital Markets is the capital desk of BullNet. It works out the acquisition math for equipment, trucks, machinery, GPU infrastructure and commercial real estate: payment, coverage, break-even utilization and the scenarios that break a deal. It prepares lender-ready packages and can introduce clients to lenders. BullNet is not a lender, and any financing comes from third-party lenders on their own terms.',
+  },
+  {
     q: 'Does BullNet use blockchain or sell tokens?',
     a: 'BullNet does not sell tokens or tokenized investments. It is exploring ENS names as optional public identity anchors for devices and agents, used for authentication only. ENS is not an access-control system, and client transaction details are never written to a public chain.',
   },

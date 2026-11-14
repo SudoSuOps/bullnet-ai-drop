@@ -13,6 +13,7 @@
 
 - Commercial real estate is the first vertical and the proof. Do not describe other verticals as available until one is.
 - Family offices are an audience, not the definition of the company.
+- Hive Capital Markets is a named desk of BullNet, always shown with the B and "by BullNet". It has no logo of its own. Its page is `/hive-capital-markets/`; hivecapitalmarkets.com should redirect there.
 - The office metaphor maps to the system: Swarm is staff, Hive is files, Node is premises, Vault is the locked room, Flight Sheet is the work order.
 - "Office" must never read as productivity software. Always pair it with agents, mandates and tested answers.
 

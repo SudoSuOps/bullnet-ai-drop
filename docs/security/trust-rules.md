@@ -14,6 +14,8 @@ These are mandatory for every change to copy, content config or demos.
 - Describe proposed software as production-certified
 - Portray BullNet as a brokerage, a fund or a token project
 - Describe a vertical as available before it exists. Offered today: commercial real estate, and equipment and hardware acquisition (Hive Capital Markets)
+- Lead with the technology. Lead with what the business gets; the Node, the Swarm, the workspace and the infrastructure explain how it is delivered
+- Say a person approves every operation. A person approves every consequential decision; routine authorized automation runs without per-step sign-off
 - Describe the Node as required. It is optional; an office can run on BullNet Infrastructure
 - Describe a connected job as automatically private or sovereign
 - Say "fine-tuned" unless a model was actually trained and tested for that job. The umbrella phrase is "tuned to suit"

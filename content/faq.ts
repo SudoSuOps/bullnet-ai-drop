@@ -30,11 +30,11 @@ export const faq = [
   },
   {
     q: 'Why are BullNet\u2019s AI agents custom-built?',
-    a: 'The general models are strong. What a business is missing is the fit. BullNet starts from strong models and builds each agent for one need, the way a single-tenant building is built for one occupant, and a business with many needs gets many agents. Each is tuned to the client\u2019s work and data, fitted into existing systems, and then managed, fixed and adjusted over time. A person gives final approval on every decision.',
+    a: 'The general models are strong. What a business is missing is the fit. BullNet starts from strong models and builds each agent for one need, the way a single-tenant building is built for one occupant, and a business with many needs gets many agents. Each is tuned to the client\u2019s work and data, fitted into existing systems, and then managed, fixed and adjusted over time. A person approves every consequential decision.',
   },
   {
     q: 'What would BullNet build for a growing contractor?',
-    a: 'As an illustration: an electrical contractor with 15 employees wins a large new construction job and needs more crew, trucks, space and office staff. BullNet would build one agent per need, such as a hiring desk, a project agent for submittals and change orders, a front desk agent, a supply and warranty agent and a compliance agent, and would pencil the truck purchases. A person at the company gives final approval on every decision.',
+    a: 'As an illustration: an electrical contractor with 15 employees wins a large new construction job and needs more crew, trucks, space and office staff. BullNet would build one agent per need, such as a hiring desk, a project agent for submittals and change orders, a front desk agent, a supply and warranty agent and a compliance agent, and would pencil the truck purchases. A person at the company approves every consequential decision.',
   },
   {
     q: 'Is BullNet a commercial real estate brokerage?',

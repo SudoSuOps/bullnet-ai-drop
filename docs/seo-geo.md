@@ -6,7 +6,7 @@ SEO is being found in search engines. GEO (generative engine optimization) is be
 
 | Check | Result |
 | --- | --- |
-| Title | "BullNet \| We Build Private AI Offices" (headline approved 2026-11-14). CRE and family office terms now live in the description, FAQ and future vertical pages |
+| Title | "BullNet \| Private AI Offices, Built to Suit" (hero copy approved 2026-11-14). CRE and family office terms now live in the description, FAQ and future vertical pages |
 | Meta description | 156 characters |
 | Canonical, Open Graph, X card | Present |
 | H1 | One. It is the brand tagline, so the keyword work is done by the title, lede and FAQ |

@@ -2,7 +2,7 @@ import { faq } from '@/content/faq';
 
 export const SITE_URL = 'https://bullnet.ai';
 export const DESCRIPTION =
-  'BullNet builds private AI offices to suit for companies that run on real estate and equipment: custom agents, managed infrastructure and organized data.';
+  'BullNet builds private AI offices for businesses that depend on real estate, equipment and informed decisions: specialized AI agents, organized business data and private computing infrastructure.';
 
 /**
  * Structured data for search engines and AI assistants.
@@ -19,7 +19,7 @@ export const structuredData = {
       url: SITE_URL,
       logo: `${SITE_URL}/assets/brand/bullnet-b-app-icon.svg`,
       description: DESCRIPTION,
-      slogan: 'We build private AI offices.',
+      slogan: 'Your business. Your data. Your private AI office.',
       email: 'build@bullnet.ai',
       telephone: '+1-561-532-7120',
       sameAs: ['https://x.com/bullnetai'],

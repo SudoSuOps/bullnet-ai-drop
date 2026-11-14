@@ -232,3 +232,6 @@ footer a{text-underline-offset:3px}
 .latest h2 a{text-decoration:none}
 .latest h2 a:hover{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px}
 .latest .pull{font-size:clamp(1.05rem,2vw,1.45rem);max-width:26ch}
+
+/* Hero headline: three sentences, sized so "Your private AI office." holds one line on desktop. */
+.hero h1{font-size:clamp(2rem,5.6vw,4.6rem)}

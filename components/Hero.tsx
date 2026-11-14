@@ -17,7 +17,7 @@ export function Hero() {
             <div><strong>National</strong><span className="mono steel">Industrial and capital markets</span></div>
           </div>
           <p className="mono steel" style={{ textTransform: 'none', letterSpacing: '.02em' }}>Figures are the founder's approximate historical record in commercial real estate, before BullNet. They are not BullNet transactions and are not independently audited.</p>
-          <div className="cta"><a className="btn" href="#flight-sheet">Initiate a Flight Sheet</a><a className="btn ghost" href="#system">Explore the architecture</a></div>
+          <div className="cta"><a className="btn" href="#flight-sheet">Initiate a Flight Sheet</a><a className="btn ghost" href="#example">See an example build</a></div>
         </div>
         <figure className="viz" aria-label="Intelligence network with the Node appliance concept">
           <HeroNet />

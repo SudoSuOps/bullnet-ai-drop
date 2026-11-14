@@ -21,6 +21,10 @@ export const faq = [
     a: 'Because off-the-shelf AI does not fit every business. BullNet builds each agent for one need, the way a single-tenant building is built for one occupant, and a business with many needs gets many agents. Each is tuned to the client\u2019s work and data, fitted into existing systems, and then managed, fixed and adjusted over time. A person gives final approval on every decision.',
   },
   {
+    q: 'What would BullNet build for a growing contractor?',
+    a: 'As an illustration: an electrical contractor with 15 employees wins a large new construction job and needs more crew, trucks, space and office staff. BullNet would build one agent per need, such as a hiring desk, a project agent for submittals and change orders, a front desk agent, a supply and warranty agent and a compliance agent, and would pencil the truck purchases. A person at the company gives final approval on every decision.',
+  },
+  {
     q: 'Is BullNet a commercial real estate brokerage?',
     a: 'No. BullNet does not list, market or sell property, and it does not act as an agent in property transactions. It is also not a lender, a fund, a securities placement agent or an investment adviser. BullNet provides analytical infrastructure and decision support, and clients keep authority over their information and their decisions.',
   },

@@ -44,6 +44,7 @@ Eight connected components. Except where noted, these are proposed capabilities 
 ## Pages
 
 - [Home](https://bullnet.ai/): the full site, including the system explorer and a browser-side valuation check
+- [Example build](https://bullnet.ai/#example): an illustrative electrical contractor and the eight agents built for it
 - [The system](https://bullnet.ai/#system)
 - [The Vault](https://bullnet.ai/#vault)
 - [Sovereign ID](https://bullnet.ai/#sovereign-id)

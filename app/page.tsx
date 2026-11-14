@@ -2,6 +2,7 @@ import { Nav } from '@/components/Nav';
 import { Hero } from '@/components/Hero';
 import { Difference } from '@/components/Difference';
 import { Problem } from '@/components/Problem';
+import { Scenario } from '@/components/Scenario';
 import { SystemSection } from '@/components/architecture/SystemSection';
 import { VaultSection } from '@/components/architecture/VaultSection';
 import { IdentitySection } from '@/components/identity/IdentitySection';
@@ -26,6 +27,7 @@ export default function Home() {
           <Hero />
           <Difference />
           <Problem />
+          <Scenario />
           <SystemSection />
           <VaultSection />
           <IdentitySection />

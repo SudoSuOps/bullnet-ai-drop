@@ -39,7 +39,7 @@ export function ExchangeCheck({ salePrice, debtPayoff, replacementPrice, ltvPct,
                     : `The replacement is ${money(r.valueShortfall)} below the sale price. Trading down generally leaves part of the gain taxable.`}
               </small>
             </div>
-            <div className="scroll">
+            <div className="scroll" tabIndex={0} role="region" aria-label="Exchange check results. Scroll sideways to see all of it.">
               <table style={{ minWidth: 420 }} aria-label="Exchange arithmetic">
                 <tbody>
                   <tr><th scope="row" className="rowh">Sale equity to place</th><td className="num">{money(r.netEquity)}</td></tr>

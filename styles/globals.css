@@ -301,3 +301,9 @@ footer a{text-underline-offset:3px}
   linear-gradient(to left,rgba(229,232,235,.28),rgba(229,232,235,0)) right center/16px 100% no-repeat scroll}
 .swipe{display:none;padding:8px 16px;border-top:1px solid var(--line);color:#A9B3BD;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase}
 @media(max-width:540px){#node .swipe{display:block}}
+
+/* Text for screen readers only. */
+.sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+
+/* Grid children may shrink below their content, so a wide table or diagram scrolls inside its panel instead of widening the page. */
+.grid2>*,.gap>*,.gap-s>*{min-width:0}

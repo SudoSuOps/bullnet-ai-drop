@@ -28,7 +28,7 @@ export function ArchDiagram({ active, onPick }: { active: ComponentKey; onPick: 
         const vertical = b.k === 'id';
         const tall = b.h > 60;
         return (
-          <g key={b.k} data-k={b.k} className={b.k === active ? 'on' : undefined} tabIndex={0} role="button" aria-label={b.title} aria-pressed={b.k === active} onClick={() => onPick(b.k)} onKeyDown={onKey(b.k)}>
+          <g key={b.k} data-k={b.k} className={b.k === active ? 'on' : undefined} tabIndex={0} role="button" aria-pressed={b.k === active} onClick={() => onPick(b.k)} onKeyDown={onKey(b.k)}>
             <rect className="bx" x={b.x} y={b.y} width={b.w} height={b.h} />
             {vertical ? (
               <>

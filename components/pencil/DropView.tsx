@@ -46,7 +46,7 @@ export function DropView({ drop }: { drop: Drop }) {
             {drop.module?.kind === 'exchange' && <ExchangeCheck {...drop.module} />}
             <div className="gap-s">
               <h2 style={{ fontSize: 'clamp(1.3rem,2.6vw,1.9rem)' }}>Show me</h2>
-              <div className="scroll">
+              <div className="scroll" tabIndex={0} role="region" aria-label="Deal figures. Scroll sideways to see all of it.">
                 <table>
                   <thead><tr><th scope="col">The question</th><th scope="col">What it decides</th></tr></thead>
                   <tbody>{drop.questions.map((q) => (<tr key={q.ask}><th scope="row" className="rowh" style={{ color: 'var(--platinum)' }}>{q.ask}</th><td>{q.decides}</td></tr>))}</tbody>

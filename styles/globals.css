@@ -223,3 +223,12 @@ footer a{text-underline-offset:3px}
 .desk-rows h2{font-size:clamp(1.1rem,2vw,1.5rem);letter-spacing:.14em}
 .desk-rows p{color:#D3D8DC;font-size:clamp(1rem,1.5vw,1.2rem)}
 @media(max-width:620px){.desk-rows li{grid-template-columns:1fr}}
+
+/* ---------- Latest drop band on the home page ---------- */
+.latest{padding:clamp(32px,5vw,64px) 0;background:var(--graphite)}
+.latest .idx{flex-wrap:wrap;margin-bottom:22px}
+.latest-body{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(24px,4vw,64px);align-items:start}
+@media(max-width:860px){.latest-body{grid-template-columns:1fr}}
+.latest h2 a{text-decoration:none}
+.latest h2 a:hover{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px}
+.latest .pull{font-size:clamp(1.05rem,2vw,1.45rem);max-width:26ch}

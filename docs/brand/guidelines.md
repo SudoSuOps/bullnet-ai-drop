@@ -15,7 +15,10 @@
 - **What we sell:** custom builds (back office agents and customer-facing support), infrastructure management, data organization, hardware and equipment acquisition.
 - **How we earn:** build fees, plus a lender-paid fee when a financing we penciled closes. Say so wherever financing is discussed.
 - **The middle:** a broker stands between buyer and seller; BullNet stands between a business and the AI it needs.
-- **Custom, not off the shelf:** one agent per need, like a single-tenant building built for one occupant.
+- **Tuned and shipped:** the general models are strong. Our value is the tuning, the fit and the upkeep. One agent per need, like a single-tenant building built for one occupant. Do not disparage off-the-shelf models; say what we add to them.
+- **The voice is the vertical.** Does It Pencil? is the front door: an opinionated daily read from thirty years of dials. The latest drop sits directly under the home page hero.
+- **We are the credit.** In a net lease everything rides on the credit of the tenant; in an AI office it rides on the credit of the builder. We built it, we own what it runs on, we back it up.
+- **Defendable stays literal.** The voice can be as opinionated as it likes; the math under it must check.
 - **Human final approval** on every decision.
 - **Voice:** thirty years of real transactions. Plain, earned, specific. Never "development" experience; the founder's career was brokerage.
 - **Not:** a CRE brokerage or agent, a lender, a paper loan broker, a fund, a token project. Bricks and mortar are not the business.

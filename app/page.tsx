@@ -1,5 +1,6 @@
 import { Nav } from '@/components/Nav';
 import { Hero } from '@/components/Hero';
+import { LatestDrop } from '@/components/pencil/LatestDrop';
 import { Difference } from '@/components/Difference';
 import { Problem } from '@/components/Problem';
 import { Scenario } from '@/components/Scenario';
@@ -25,6 +26,7 @@ export default function Home() {
         {/* One set of hypothetical inputs drives the receipt (06), the validator (08) and the sample Flight Sheet (10). */}
         <ValidatorProvider>
           <Hero />
+          <LatestDrop />
           <Difference />
           <Problem />
           <Scenario />

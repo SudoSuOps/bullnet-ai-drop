@@ -18,7 +18,7 @@ export const faq = [
   },
   {
     q: 'Why are BullNet\u2019s AI agents custom-built?',
-    a: 'Because off-the-shelf AI does not fit every business. BullNet builds each agent for one need, the way a single-tenant building is built for one occupant, and a business with many needs gets many agents. Each is tuned to the client\u2019s work and data, fitted into existing systems, and then managed, fixed and adjusted over time. A person gives final approval on every decision.',
+    a: 'The general models are strong. What a business is missing is the fit. BullNet starts from strong models and builds each agent for one need, the way a single-tenant building is built for one occupant, and a business with many needs gets many agents. Each is tuned to the client\u2019s work and data, fitted into existing systems, and then managed, fixed and adjusted over time. A person gives final approval on every decision.',
   },
   {
     q: 'What would BullNet build for a growing contractor?',

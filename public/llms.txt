@@ -9,7 +9,8 @@ Contact: build@bullnet.ai, +1 561 532 7120, https://x.com/bullnetai
 
 - BullNet is a service provider: a build-to-suit private AI office and AI systems engineering operation. It is independent and founder-led.
 - Services: custom agent builds (back office and customer-facing), infrastructure management, data organization, hardware and equipment acquisition.
-- Agents are custom-built, one per need. BullNet does not sell off-the-shelf AI.
+- BullNet starts from strong general models and tunes, integrates, tests and maintains them per client, one agent per need.
+- Does It Pencil? is BullNet's market intel series and its public voice: opinionated reads on deal structures, backed by arithmetic that can be checked.
 - BullNet earns build fees. A lender may also pay BullNet a fee when a financing it helped arrange closes.
 - A private AI office is a dedicated AI operation for one principal or firm, in the way a family office is a dedicated staff for one family's capital.
 - Verticals today: commercial real estate, and equipment and hardware acquisition through Hive Capital Markets, the capital desk of BullNet.

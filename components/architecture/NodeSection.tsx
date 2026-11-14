@@ -2,9 +2,25 @@
 
 import { useState } from 'react';
 import { site } from '@/content/site';
-import { node } from '@/content/node';
+import { node, type HardwareStatus } from '@/content/node';
 import { Picker } from '@/components/Picker';
 import { NodeDiagram } from '@/components/architecture/NodeDiagram';
+
+type Hardware = (typeof node.hardware)[number];
+
+/** Cards for a group of hardware. Each card carries its own status label. */
+function HardwareList({ items }: { items: readonly Hardware[] }) {
+  return (
+    <ul className="gear">
+      {items.map((g) => (
+        <li key={g.id} className={g.img ? 'has-img' : undefined}>
+          {g.img && (<figure className="shot"><img src={g.img.src} alt={g.img.alt} width={g.img.width} height={g.img.height} decoding="async" /><figcaption className="mono">{g.caption}</figcaption></figure>)}
+          <div className="gap-s"><span className="tag b">{g.status}</span><h3>{g.name}</h3><p>{g.what}</p></div>
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 /** The Node: optional on-site compute. Product, equipment, functions, an illustrative workflow, where work runs, control, and the next step. */
 export function NodeSection() {
@@ -12,6 +28,10 @@ export function NodeSection() {
   const [di, setDi] = useState(0);
   const [ci, setCi] = useState(0);
   const c = node.configs[ci];
+  // Status is widened so the 'In operation' group works the day an item is upgraded in content/node.ts.
+  const status = (h: Hardware): HardwareStatus => h.status;
+  const operating = node.hardware.filter((h) => status(h) === 'In operation');
+  const developing = node.hardware.filter((h) => status(h) === 'In development' || status(h) === 'Design concept');
   const f = node.functions[fi];
   const d = site.deploy[di];
   return (
@@ -25,35 +45,49 @@ export function NodeSection() {
           <p className="lede">A Node is optional. Many offices run entirely on compute BullNet hosts privately. We recommend one only when keeping the work on your premises earns its cost.</p></header>
         <p className="pull" style={{ maxWidth: '30ch' }}>The Node is where the work runs. The Office is where your people work.</p>
 
-        {/* 02 The equipment: four proposed configurations */}
+        {/* 02 The equipment: what we operate (shown only when evidenced), what we are developing, and what we configure to suit */}
         <div className="journey">
           <div className="gap-s"><p className="mono brass">02 The equipment</p><h3>One business. The right Node.</h3>
-            <p>We pencil the equipment before we prescribe it. These are four proposed configurations, built from equipment BullNet runs itself. Your Node is built to suit: it could be one of these, something larger, or hardware you already own.</p></div>
-          <Picker label="Node configurations" value={ci} onChange={setCi} items={node.configs.map((x) => x.name)} />
-          <div className="grid2">
-            <div className="panel"><div className="ph mono"><span>{c.name}</span><span className="brass">Proposed configuration</span></div>
-              <div className="pb gap-s" aria-live="polite">
-                <p className="cfg-line">{c.line}</p>
-                <dl className="kv">
-                  <dt>What it does</dt><dd>{c.does}</dd>
-                  <dt>Who needs it</dt><dd>{c.who}</dd>
-                  <dt>Runs locally</dt><dd>{c.local}</dd>
-                  <dt>Needs more compute</dt><dd>{c.more}</dd>
-                  <dt>BullNet manages</dt><dd>{c.manages}</dd>
-                  <dt>Stays with you</dt><dd>{c.yours}</dd>
-                </dl>
-                {c.note && (<p className="note">{c.note}</p>)}
-              </div></div>
-            <ul className="gear" aria-label={`${c.name}: builds and evidence`}>
-              {c.builds.map((g) => (
-                <li key={g.name}>
-                  {g.img && (<figure className="shot"><img src={g.img.src} alt={g.img.alt} width={g.img.width} height={g.img.height} decoding="async" /><figcaption className="mono">{g.caption}</figcaption></figure>)}
-                  <div className="gap-s"><span className="tag b">{g.evidence}</span><h3>{g.name}</h3><p>{g.what}</p></div>
-                </li>
-              ))}
-            </ul>
+            <p>We pencil the equipment before we prescribe it. The Node is not a fixed product. It is a deployment configuration designed around your business’s requirements: it could be built from the hardware below, something larger, or equipment you already own.</p></div>
+
+          {operating.length > 0 && (
+            <div className="gap-s">
+              <h3 className="grp">Hardware we operate</h3>
+              <HardwareList items={operating} />
+            </div>
+          )}
+
+          <div className="gap-s">
+            <h3 className="grp">Hardware and enclosures we’re developing</h3>
+            <HardwareList items={developing} />
+            <p className="steel">“In development” means we are building and testing it. It is not yet documented as in operation, and it is not a customer deployment. Renders are captioned as renders.</p>
           </div>
-          <p className="steel">“Tested at BullNet” means we run it in our own operation. It is not a customer deployment or a performance claim. No prices, performance figures, certifications or availability dates are stated. Each configuration is specified and tested for the customer before it is relied on. Product names belong to their makers.</p>
+
+          <div className="gap-s">
+            <h3 className="grp">Solutions we configure to suit</h3>
+            <p>Four example configurations. None is a finished or certified product.</p>
+            <Picker label="Node configurations" value={ci} onChange={setCi} items={node.configs.map((x) => x.name)} />
+            <div className="grid2">
+              <div className="panel"><div className="ph mono"><span>{c.name}</span><span className="brass">Proposed configuration</span></div>
+                <div className="pb gap-s" aria-live="polite">
+                  <p className="cfg-line">{c.line}</p>
+                  <dl className="kv">
+                    <dt>What it does</dt><dd>{c.does}</dd>
+                    <dt>Who needs it</dt><dd>{c.who}</dd>
+                    <dt>Designed to run locally</dt><dd>{c.local}</dd>
+                    <dt>Needs more compute</dt><dd>{c.more}</dd>
+                    <dt>BullNet manages</dt><dd>{c.manages}</dd>
+                    <dt>Stays with you</dt><dd>{c.yours}</dd>
+                  </dl>
+                  {c.note && (<p className="note">{c.note}</p>)}
+                </div></div>
+              <div className="panel"><div className="ph mono"><span>Could be built from</span><span>Status</span></div>
+                <div className="pb" aria-live="polite"><ul className="from">
+                  {c.from.map((id) => { const h = node.hardware.find((x) => x.id === id)!; return (<li key={id}><span>{h.name}</span><span className="tag b">{h.status}</span></li>); })}
+                </ul></div></div>
+            </div>
+          </div>
+          <p className="steel">No prices, performance figures, certifications or availability dates are stated. Each configuration is specified and tested for the customer before it is relied on. Product names belong to their makers.</p>
         </div>
 
         {/* 03 What it does */}
@@ -81,13 +115,13 @@ export function NodeSection() {
 
         {/* 04 See it work */}
         <div className="journey">
-          <div className="gap-s"><p className="mono brass">04 See it work</p><h3>A question about a 600-unit project.</h3>
-            <p>The electrical contractor from our example is managing drawings, submittals, requests for information, supplier documents and deadlines. His project manager asks:</p>
-            <p className="note">“{node.workflow.ask}”</p></div>
-          <ol className="steps">
+          <div className="gap-s"><p className="mono brass">04 See it work</p><h3>A project document arrives.</h3>
+            <p>The electrical contractor from our example is managing drawings, submittals, requests for information, supplier documents and deadlines on a 600-unit project. This is how a Node is meant to help.</p></div>
+          <ol className="steps five">
             {node.workflow.steps.map((x, k) => (<li key={x.t}><span className="mono brass">0{k + 1}</span><h3>{x.t}</h3><p>{x.d}</p></li>))}
           </ol>
-          <p className="steel"><span className="tag b">Illustrative demonstration</span> A proposed workflow, not a customer deployment. Comparing documents does not replace engineering review.</p>
+          <p className="note">At step three the project manager might ask: “{node.workflow.ask}”</p>
+          <p className="steel"><span className="tag b">Illustrative demonstration</span> Illustrative workflow; actual functionality depends on the configured and verified system. Comparing documents does not replace engineering review.</p>
         </div>
 
         {/* 05 Where the work runs */}

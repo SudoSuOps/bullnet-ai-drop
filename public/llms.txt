@@ -39,7 +39,7 @@ Nine connected components. Except where noted, these are proposed capabilities t
 
 - The Swarm: specialized AI agents, each with a written mandate, authorized data sources, approved tools and human escalation rules.
 - The Hive: private domain knowledge, separated into BullNet datasets, public and licensed information, client confidential information and generated work products.
-- The Node: an optional private AI computer inside the client's business for local inference and private data processing. It connects to BullNet only when the client authorizes it. BullNet runs Node-class equipment in its own operation; each customer Node is built to suit and tested before it is relied on. No prices or performance figures are published.
+- The Node: an optional private AI computer inside the client's business for local inference and private data processing. It connects to BullNet only when the client authorizes it. The Node is not a fixed product; it is a deployment configuration designed around the business. Node hardware is in development at BullNet and is labelled by status on the site (in operation, in development, design concept, proposed configuration). No prices or performance figures are published.
 - BullNet Infrastructure: the utility. Private compute BullNet owns and operates, for work a Node cannot carry or for offices that run without a Node. A connected job is not automatically private; what crosses is listed and approved first.
 - The Vault: a policy and authorization framework for confidential client data. Not a regulated escrow service.
 - Sovereign ID: cryptographic identity for devices, agents, mandates and work products. ENS names are being explored as optional public anchors. ENS is not access control.

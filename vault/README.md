@@ -1,6 +1,6 @@
-# Vault, step one
+# Vault, steps one and two
 
-Status: **built and tested. Not yet running in any client office.** This is the foundation only: no access gate, no log, no chain.
+Status: **built and tested. Not yet running in any client office.** This is the foundation only: IDs, fingerprints and the log. No access gate, no encryption, no chain.
 
 The vault is not specific to real estate. An asset can be a property, a company, a contract, a piece of equipment or anything else that has confidential files.
 
@@ -21,6 +21,24 @@ node --experimental-strip-types vault/cli.ts verify manifest.json ./deal-room
 
 `verify` prints `MATCH`, or `CHANGED` with the files added, removed and changed.
 
+## What step two does
+
+**Signed log** (`log.ts`, `log-file.ts`). Every vault event becomes one entry that carries the hash of the entry before it and a signature from the node's log key. Editing, removing, inserting or reordering an entry makes verification fail at that entry.
+
+```
+node --experimental-strip-types vault/cli.ts log-keygen log-private.pem log-public.pem
+node --experimental-strip-types vault/cli.ts log-append log.jsonl log-private.pem ACCESS_GRANTED 0x<asset-id> ndas party=party-0017
+node --experimental-strip-types vault/cli.ts log-verify log.jsonl log-public.pem [checkpoint.json]
+```
+
+Limits, stated plainly:
+
+- Whoever holds the private key and the file can cut entries off the end or rewrite the whole log, and it will still verify. A **checkpoint** (entry number plus head hash) given to a second party catches that. The seller's weekly report should carry one.
+- The log records what the node was told. It does not prove an event happened in the real world.
+- Times come from the node's clock.
+- One writer at a time.
+- Keep personal details out of entries. Use party IDs. The log is permanent by design.
+
 ## Rules
 
 - The key never leaves the vault. It is never published and never put on a chain. Lose the key and the link between IDs and assets can no longer be proven.
@@ -35,4 +53,4 @@ It sits in the website repository for now because that is where the tests run. I
 
 ## Next steps (see the NDAS proposal in the project)
 
-2. Signed append-only log. 3. NDAS gate. 4. Weekly seller report. 5. Broker ID. 6. Optional on-chain anchoring.
+3. NDAS gate. 4. Weekly seller report. 5. Broker ID. 6. Optional on-chain anchoring.

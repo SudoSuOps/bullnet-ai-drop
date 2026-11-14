@@ -10,6 +10,8 @@ import { NodeDiagram } from '@/components/architecture/NodeDiagram';
 export function NodeSection() {
   const [fi, setFi] = useState(0);
   const [di, setDi] = useState(0);
+  const [ci, setCi] = useState(0);
+  const c = node.configs[ci];
   const f = node.functions[fi];
   const d = site.deploy[di];
   return (
@@ -23,19 +25,35 @@ export function NodeSection() {
           <p className="lede">A Node is optional. Many offices run entirely on compute BullNet hosts privately. We recommend one only when keeping the work on your premises earns its cost.</p></header>
         <p className="pull" style={{ maxWidth: '30ch' }}>The Node is where the work runs. The Office is where your people work.</p>
 
-        {/* 02 The physical appliance */}
+        {/* 02 The equipment: four proposed configurations */}
         <div className="journey">
           <div className="gap-s"><p className="mono brass">02 The equipment</p><h3>One business. The right Node.</h3>
-            <p>We pencil the equipment before we prescribe it. This is equipment BullNet operates itself, shown as a baseline and not a catalogue. Your Node is built to suit: it could be one of these, something larger, or hardware you already own.</p></div>
-          <ul className="gear">
-            {node.gear.map((g) => (
-              <li key={g.name} className={g.img ? 'has-img' : undefined}>
-                {g.img && (<figure className="shot"><img src={g.img.src} alt={g.img.alt} width={g.img.width} height={g.img.height} loading="lazy" decoding="async" /><figcaption className="mono">{g.caption}</figcaption></figure>)}
-                <div className="gap-s"><span className="tag b">{g.status}</span><h3>{g.name}</h3><p>{g.what}</p></div>
-              </li>
-            ))}
-          </ul>
-          <p className="steel">No prices, performance figures, certifications or availability dates are stated. Each configuration is specified and tested for the customer before it is relied on. Product names belong to their makers.</p>
+            <p>We pencil the equipment before we prescribe it. These are four proposed configurations, built from equipment BullNet runs itself. Your Node is built to suit: it could be one of these, something larger, or hardware you already own.</p></div>
+          <Picker label="Node configurations" value={ci} onChange={setCi} items={node.configs.map((x) => x.name)} />
+          <div className="grid2">
+            <div className="panel"><div className="ph mono"><span>{c.name}</span><span className="brass">Proposed configuration</span></div>
+              <div className="pb gap-s" aria-live="polite">
+                <p className="cfg-line">{c.line}</p>
+                <dl className="kv">
+                  <dt>What it does</dt><dd>{c.does}</dd>
+                  <dt>Who needs it</dt><dd>{c.who}</dd>
+                  <dt>Runs locally</dt><dd>{c.local}</dd>
+                  <dt>Needs more compute</dt><dd>{c.more}</dd>
+                  <dt>BullNet manages</dt><dd>{c.manages}</dd>
+                  <dt>Stays with you</dt><dd>{c.yours}</dd>
+                </dl>
+                {c.note && (<p className="note">{c.note}</p>)}
+              </div></div>
+            <ul className="gear" aria-label={`${c.name}: builds and evidence`}>
+              {c.builds.map((g) => (
+                <li key={g.name}>
+                  {g.img && (<figure className="shot"><img src={g.img.src} alt={g.img.alt} width={g.img.width} height={g.img.height} decoding="async" /><figcaption className="mono">{g.caption}</figcaption></figure>)}
+                  <div className="gap-s"><span className="tag b">{g.evidence}</span><h3>{g.name}</h3><p>{g.what}</p></div>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <p className="steel">“Tested at BullNet” means we run it in our own operation. It is not a customer deployment or a performance claim. No prices, performance figures, certifications or availability dates are stated. Each configuration is specified and tested for the customer before it is relied on. Product names belong to their makers.</p>
         </div>
 
         {/* 03 What it does */}

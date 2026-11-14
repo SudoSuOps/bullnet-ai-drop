@@ -14,6 +14,10 @@ These are mandatory for every change to copy, content config or demos.
 - Describe proposed software as production-certified
 - Portray BullNet as a brokerage, a fund or a token project
 - Describe a vertical as available before it exists. Offered today: commercial real estate, and equipment and hardware acquisition (Hive Capital Markets)
+- Describe the Node as required. It is optional; an office can run on BullNet Infrastructure
+- Describe a connected job as automatically private or sovereign
+- Say "fine-tuned" unless a model was actually trained and tested for that job. The umbrella phrase is "tuned to suit"
+- Present a concept layout or diagram as a screenshot of a real office
 - Describe BullNet as a lender, quote rates, or imply approval or terms. Financing comes from third-party lenders
 
 ## Always label which of these a claim is

@@ -10,7 +10,7 @@ export function ValidatorSection() {
   return (
     <section id="defendable">
       <div className="wrap">
-        <header className="sh"><p className="idx mono"><b>08</b> Defendable / Validate the validator</p>
+        <header className="sh"><p className="idx mono"><b>12</b> Defendable / Validate the validator</p>
           <h2>If the math fails,<br />the answer fails.</h2>
           <p className="lede">The model is not the authority. The evidence is. An agent has submitted a direct-capitalization value for a hypothetical industrial property. Change any input and the check below recomputes it independently in your browser.</p></header>
         <div className="grid2">

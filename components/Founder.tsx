@@ -2,7 +2,7 @@ export function Founder() {
   return (
     <section id="founder">
       <div className="wrap">
-        <header className="sh"><p className="idx mono"><b>11</b> The founder</p>
+        <header className="sh"><p className="idx mono"><b>07</b> The founder</p>
           <h2>Built in the trenches.<br />Engineered for what comes next.</h2></header>
         <div className="grid2 fgrid">
           <div className="photo mono"><span>Founder photograph<br /><br />Reserved for an authorized image</span></div>

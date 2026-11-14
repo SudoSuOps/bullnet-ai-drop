@@ -10,7 +10,7 @@ export function FlightSheetSection() {
   return (
     <section id="flight-sheet">
       <div className="wrap">
-        <header className="sh"><p className="idx mono"><b>10</b> The Flight Sheet</p>
+        <header className="sh"><p className="idx mono"><b>08</b> The Flight Sheet</p>
           <h2>Every mission begins<br />with a Flight Sheet.</h2>
           <p className="lede">The Flight Sheet defines the mandate before work starts and holds the evidence when it ends. On the left is an illustrative completed sheet. On the right you can draft your own request.</p></header>
         <div className="grid2">
@@ -32,7 +32,7 @@ export function FlightSheetSection() {
     <tr key={x.label}><th scope="row" style={{ font: 'inherit', textTransform: 'none', letterSpacing: 0, color: '#AEB6BE' }}>{x.label}</th><td className="num">{x.capPct.toFixed(2)}%</td><td className="num" style={{ color: 'var(--platinum)' }}>{usd(x.value)}</td></tr>
     ))}
     </tbody></table></div>
-              <p className="steel" style={{ fontSize: '.84rem' }}>Sensitivity recalculates from the validator inputs in section 08. No figure here is a real property, client or transaction.</p>
+              <p className="steel" style={{ fontSize: '.84rem' }}>Sensitivity recalculates from the validator inputs in section 12. No figure here is a real property, client or transaction.</p>
             </div></div>
 
           <Intake />

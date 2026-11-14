@@ -1,6 +1,6 @@
 # BullNet
 
-> BullNet builds private AI offices to suit. It custom-builds AI agents for small and mid-size companies that run on real estate and equipment (warehouse operators, contractors, distributors), manages the infrastructure, organizes the data and works out the math on hardware and equipment purchases. It runs on bare-metal compute the founder owns and operates. A person gives final approval on every decision. Tagline: Your data. Your intelligence. Your next move.
+> BullNet builds private AI offices to suit. It custom-builds AI agents for small and mid-size companies that run on real estate and equipment (warehouse operators, contractors, distributors), manages the infrastructure, organizes the data and works out the math on hardware and equipment purchases. It runs on bare-metal compute the founder owns and operates. A person gives final approval on every decision. Headline: We build private AI offices. Tagline: Your data. Your intelligence. Your next move.
 
 Website: https://bullnet.ai
 Contact: build@bullnet.ai, +1 561 532 7120, https://x.com/bullnetai
@@ -12,7 +12,9 @@ Contact: build@bullnet.ai, +1 561 532 7120, https://x.com/bullnetai
 - BullNet starts from strong general models and tunes, integrates, tests and maintains them per client, one agent per need.
 - Does It Pencil? is BullNet's market intel series and its public voice: opinionated reads on deal structures, backed by arithmetic that can be checked.
 - BullNet earns build fees. A lender may also pay BullNet a fee when a financing it helped arrange closes.
-- A private AI office is a dedicated AI operation for one principal or firm, in the way a family office is a dedicated staff for one family's capital.
+- A private AI office is the workspace where one company's people and its approved AI agents work together. BullNet designs, builds and operates it.
+- BullNet works one job at a time. Each build runs in shadow beside the client's current process before it goes live on a person's sign-off.
+- Build ladder: script (no AI model), configured agent, grounded agent, fine-tuned agent. BullNet uses the lowest rung that does the job. The model is off the shelf; the agent is built to suit.
 - Verticals today: commercial real estate, and equipment and hardware acquisition through Hive Capital Markets, the capital desk of BullNet.
 - Hive Capital Markets works out acquisition and financing math and prepares lender-ready packages. BullNet is not a lender; financing comes from third-party lenders.
 - Audience: small and mid-size companies that operate inside real estate and rely on equipment. Also property owners, family offices and private capital groups.
@@ -31,25 +33,29 @@ Contact: build@bullnet.ai, +1 561 532 7120, https://x.com/bullnetai
 
 ## The system
 
-Eight connected components. Except where noted, these are proposed capabilities that are validated per deployment.
+Nine connected components. Except where noted, these are proposed capabilities that are validated per deployment.
+
+- The Private AI Office: the premises. The workspace where a client's people and approved agents work, reached from a desk or a phone.
 
 - The Swarm: specialized AI agents, each with a written mandate, authorized data sources, approved tools and human escalation rules.
 - The Hive: private domain knowledge, separated into BullNet datasets, public and licensed information, client confidential information and generated work products.
-- The Node: a sovereign edge AI appliance for local inference and private data processing. A design concept; no hardware specifications are published.
+- The Node: an optional private AI computer inside the client's business for local inference and private data processing. It connects to BullNet only when the client authorizes it. A design concept; no hardware specifications are published.
+- BullNet Infrastructure: the utility. Private compute BullNet owns and operates, for work a Node cannot carry or for offices that run without a Node. A connected job is not automatically private; what crosses is listed and approved first.
 - The Vault: a policy and authorization framework for confidential client data. Not a regulated escrow service.
 - Sovereign ID: cryptographic identity for devices, agents, mandates and work products. ENS names are being explored as optional public anchors. ENS is not access control.
 - The Flight Sheet: the standard work specification and evidence package for each engagement.
 - Defendable: the evaluation layer. Statuses are mathematically verified, evidence supported, inconclusive, failed, and requires human review.
-- Capital Intelligence: underwriting, capital structure, sensitivity, discounted cash flow, cap-rate and lease analysis as decision support.
 
 ## Pages
 
 - [Home](https://bullnet.ai/): the full site, including the system explorer and a browser-side valuation check
+- [The Private AI Office](https://bullnet.ai/#office)
+- [The Node](https://bullnet.ai/#node)
+- [How it connects](https://bullnet.ai/#system)
 - [Example build](https://bullnet.ai/#example): an illustrative electrical contractor and the eight agents built for it
-- [The system](https://bullnet.ai/#system)
+- [More illustrative builds](https://bullnet.ai/#more-examples): an industrial asset owner and a cold-chain operator
 - [The Vault](https://bullnet.ai/#vault)
 - [Sovereign ID](https://bullnet.ai/#sovereign-id)
-- [The Node](https://bullnet.ai/#node)
 - [Defendable](https://bullnet.ai/#defendable)
 - [Industry expertise](https://bullnet.ai/#expertise)
 - [Flight Sheet intake](https://bullnet.ai/#flight-sheet)

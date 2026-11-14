@@ -31,6 +31,7 @@ Full steps, custom domain and headers: [docs/deployment/cloudflare-pages.md](doc
 app/                     layout, page, metadata, robots, sitemap, favicon
 components/              page sections and shared UI
   architecture/          system explorer, Vault boundary, Node
+  office/                the Private AI Office section (concept channel layout)
   validation/            deterministic validator and its shared state
   flight-sheet/          sample Flight Sheet and intake form
   identity/              Sovereign ID hierarchy and evidence receipt
@@ -48,11 +49,11 @@ docs/                    brand, security, deployment, integration checklist
 
 | Area | Status |
 | --- | --- |
-| Validator (section 08) | Real arithmetic, runs in the browser, unit tested. Not a deployed model evaluator. |
-| Evidence receipt (section 06) | Real SHA-256 digest of the payload shown. No signature: the site holds no key. Names are hypothetical. |
-| Sample Flight Sheet (section 10) | Hypothetical figures driven by the validator inputs. |
+| Validator (section 12) | Real arithmetic, runs in the browser, unit tested. Not a deployed model evaluator. |
+| Evidence receipt (section 11) | Real SHA-256 digest of the payload shown. No signature: the site holds no key. Names are hypothetical. |
+| Sample Flight Sheet (section 08) | Hypothetical figures driven by the validator inputs. |
 | Intake form | Posts to `/api/intake` (Cloudflare Pages Function), which emails the request through Resend. Reports success only when Resend accepts the message. Needs the `RESEND_API_KEY` secret in Cloudflare. |
-| Vault, Sovereign ID, Node, Swarm, Hive | Proposed capabilities and design concepts, labelled as such on the page. |
+| Private AI Office, Vault, Sovereign ID, Node, Swarm, Hive | Proposed capabilities and design concepts, labelled as such on the page. The Office channel layout is a concept, not a screenshot. |
 
 ## Before launch
 

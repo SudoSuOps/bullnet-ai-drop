@@ -6,7 +6,7 @@ export function Faq() {
     <section id="faq">
       <div className="wrap">
         <header className="sh">
-          <p className="idx mono"><b>13</b> Questions</p>
+          <p className="idx mono"><b>14</b> Questions</p>
           <h2>Straight answers.</h2>
           <p className="lede">What BullNet is, who it is for and how it works, in plain terms.</p>
         </header>

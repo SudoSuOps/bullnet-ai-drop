@@ -6,17 +6,18 @@ import type { ComponentKey } from '@/content/site';
 interface Box { k: ComponentKey; x: number; y: number; w: number; h: number; title: string; sub: string }
 
 const BOXES: Box[] = [
-  { k: 'capital', x: 16, y: 12, w: 636, h: 44, title: 'CAPITAL INTELLIGENCE', sub: '08 / domain layer' },
-  { k: 'flight', x: 16, y: 84, w: 116, h: 100, title: 'FLIGHT SHEET', sub: '06 / mandate' },
-  { k: 'vault', x: 146, y: 84, w: 116, h: 100, title: 'THE VAULT', sub: '04 / access' },
-  { k: 'hive', x: 276, y: 84, w: 116, h: 100, title: 'THE HIVE', sub: '02 / knowledge' },
-  { k: 'swarm', x: 406, y: 84, w: 116, h: 100, title: 'THE SWARM', sub: '01 / agents' },
-  { k: 'defend', x: 536, y: 84, w: 116, h: 100, title: 'DEFENDABLE', sub: '07 / testing' },
-  { k: 'node', x: 16, y: 212, w: 636, h: 44, title: 'THE NODE', sub: '03 / sovereign compute' },
-  { k: 'id', x: 668, y: 12, w: 76, h: 244, title: 'SOVEREIGN ID', sub: '05 / identity' },
+  { k: 'office', x: 16, y: 12, w: 636, h: 44, title: 'PRIVATE AI OFFICE', sub: '01 / the premises' },
+  { k: 'flight', x: 16, y: 84, w: 116, h: 100, title: 'FLIGHT SHEET', sub: '08 / work order' },
+  { k: 'vault', x: 146, y: 84, w: 116, h: 100, title: 'THE VAULT', sub: '06 / access' },
+  { k: 'hive', x: 276, y: 84, w: 116, h: 100, title: 'THE HIVE', sub: '03 / files' },
+  { k: 'swarm', x: 406, y: 84, w: 116, h: 100, title: 'THE SWARM', sub: '02 / staff' },
+  { k: 'defend', x: 536, y: 84, w: 116, h: 100, title: 'DEFENDABLE', sub: '09 / testing' },
+  { k: 'node', x: 16, y: 212, w: 310, h: 44, title: 'THE NODE', sub: '04 / on site, optional' },
+  { k: 'infra', x: 342, y: 212, w: 310, h: 44, title: 'BULLNET INFRASTRUCTURE', sub: '05 / the utility' },
+  { k: 'id', x: 668, y: 12, w: 76, h: 244, title: 'SOVEREIGN ID', sub: '07 / identity' },
 ];
 
-/** Clickable map of the eight components. Keyboard: Tab to a box, Enter or Space to select. */
+/** Clickable map of the nine components. The Node is optional: work can run on it, on BullNet Infrastructure, or both. Keyboard: Tab to a box, Enter or Space to select. */
 export function ArchDiagram({ active, onPick }: { active: ComponentKey; onPick: (k: ComponentKey) => void }) {
   const onKey = (k: ComponentKey) => (e: KeyboardEvent<SVGGElement>) => {
     if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onPick(k); }
@@ -43,7 +44,7 @@ export function ArchDiagram({ active, onPick }: { active: ComponentKey; onPick: 
           </g>
         );
       })}
-      <path className="ar" d="M132 134h14M262 134h14M392 134h14M522 134h14M334 56v28M334 184v28M652 134h16" />
+      <path className="ar" d="M132 134h14M262 134h14M392 134h14M522 134h14M334 56v28M171 184v28M497 184v28M326 234h16M652 134h16" />
     </svg>
   );
 }

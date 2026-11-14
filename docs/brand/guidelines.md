@@ -6,8 +6,8 @@
 
 | Line | Text |
 | --- | --- |
-| Headline | We build private AI offices. |
-| Support | Your data. Your intelligence. Your next move. |
+| Headline | Your business. Your data. Your private AI office. |
+| Support | Built to suit. Operated with purpose. |
 | Descriptor | Build-to-suit private AI offices |
 | Thesis | The last mile of intelligence. |
 | Proof | 30 years in the trenches. Built for the agent economy. |
@@ -19,7 +19,7 @@
 - **The voice is the vertical.** Does It Pencil? is the front door: an opinionated daily read from thirty years of dials. The latest drop sits directly under the home page hero.
 - **We are the credit.** In a net lease everything rides on the credit of the tenant; in an AI office it rides on the credit of the builder. We built it, we own what it runs on, we back it up.
 - **Defendable stays literal.** The voice can be as opinionated as it likes; the math under it must check.
-- **Human final approval** on every decision.
+- **A person approves every consequential decision.** Routine authorized automation does not need sign-off on each operation.
 - **Voice:** thirty years of real transactions. Plain, earned, specific. Never "development" experience; the founder's career was brokerage.
 - **Not:** a CRE brokerage or agent, a lender, a paper loan broker, a fund, a token project. Bricks and mortar are not the business.
 - Family offices and private capital are a secondary audience.

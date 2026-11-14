@@ -51,8 +51,15 @@ export const node = {
     {
       name: 'Edge box',
       status: 'In use at BullNet',
-      what: 'An NVIDIA Jetson Orin Nano developer kit in a case we design and 3D print. A small desktop unit that runs small models on site. It is development hardware, and it does not host the office workspace.',
-      img: { src: '/assets/node/edge-case-concept.webp', alt: 'Concept render of a 3D-printed case holding a small single-board computer, with a top fan and an open bay showing its USB, network and power ports. Two smaller views show a camera and a microphone attached.', width: 1400, height: 933 },
+      what: 'An NVIDIA Jetson Orin Nano developer kit. A small desktop unit that runs small models on site. It is development hardware, and it does not host the office workspace.',
+      img: { src: '/assets/node/jetson-orin-nano-dev-kit.webp', alt: 'Photograph of an NVIDIA Jetson Orin Nano developer kit on a workbench cutting mat: a small circuit board with a fan-cooled module, USB ports, a network port and a display port', width: 1400, height: 1050 },
+      caption: 'Photograph of the developer kit on our bench.',
+    },
+    {
+      name: 'Printed case',
+      status: 'In use at BullNet',
+      what: 'A case we design and 3D print for the edge box, with a top fan and an open port bay. The camera and voice add-ons shown are concepts.',
+      img: { src: '/assets/node/edge-case-concept.webp', alt: 'Concept render titled BullNet Edge Gold: a 3D-printed case holding a small single-board computer, with a top fan carrying the BullNet B and an open bay showing its USB, network and power ports. Two smaller views show a camera and a microphone attached.', width: 1400, height: 788 },
       caption: 'Concept render of our printed case. Accessory fit to be verified.',
     },
     {

@@ -53,7 +53,7 @@ export function Scenario() {
 
         {/* 02 The pressure */}
         <div className="journey">
-          <div className="gap-s"><p className="mono brass">02 The pressure</p><h3>The contract is signed. Now everything else has to grow.</h3>
+          <div className="gap-s"><p className="mono brass">02 The pressure</p><h3>The job is awarded. Now the business has to deliver.</h3>
             <p className="steel">More people, three more trucks and more material than a 2,000 SF building was leased to hold.</p></div>
           <div className="stages" style={{ marginBottom: 0 }}>
             {scenario.pressure.map((p) => (<div key={p.name}><h3>{p.name}</h3><p>{p.text}</p></div>))}
@@ -65,7 +65,7 @@ export function Scenario() {
           <div className="gap-s">
             <p className="mono brass">03 The Flight Sheet</p>
             <h3>First question: does the growth pencil?</h3>
-            <p>A 600-unit contract is not automatically a profitable one. Before any technology is prescribed, BullNet sits down with the owner and writes a Growth Flight Sheet: what the commitment requires, what the business can support today, and where the gaps are. The office is designed around the gaps.</p>
+            <p>A 600-unit contract is not automatically a profitable one. Before any technology is prescribed, BullNet sits down with the owner and writes a Growth Flight Sheet: what the commitment requires, what the business can support today, where the gaps are, and whether the timing works. The office is designed around the gaps.</p>
             <p className="steel">The Flight Sheet works from the contractor’s own documents and numbers. It is decision support, reviewed by the owner and his advisers. It is not financial, legal or tax advice.</p>
           </div>
           <div className="panel">
@@ -115,6 +115,8 @@ export function Scenario() {
           </div>
           <figcaption>Illustrative concept of the office workspace. It is not a screenshot, a live product screen or a customer conversation.</figcaption>
         </figure>
+        <p className="ws-line">One approved project record. Specialized agents. Connected workflows. Human authority.</p>
+        <p className="steel">Proposed system architecture. It describes how the office is designed to work, not a production integration.</p>
 
         {/* 05 Human authority, 06 Infrastructure, 07 Built to suit */}
         <div className="journey stages" style={{ marginBottom: 0 }}>
@@ -141,8 +143,8 @@ export function Scenario() {
         </p>
 
         <div className="convert">
-          <h3>What does growth require from your business?</h3>
-          <p>Every company has different people, equipment, information, and operating challenges. Tell us what you’re building. We’ll start with the Flight Sheet and determine what pencils.</p>
+          <h3>Your next move starts with a Flight Sheet.</h3>
+          <p>Tell us what your business is working through. The people, the equipment, the facilities, the information, and the decisions. We’ll define the assignment, examine what pencils, and determine whether a private AI office makes sense.</p>
           <div className="cta"><a className="btn" href="#flight-sheet">Start Your Flight Sheet</a></div>
         </div>
       </div>

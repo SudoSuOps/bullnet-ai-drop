@@ -1,62 +1,75 @@
 /**
- * The walkthrough on the home page: one illustrative operating company and the office BullNet would build for it.
+ * The walkthrough on the home page: one fictional operating company and the office BullNet would build for it.
  * This is a made-up company. Do not turn it into a case study, add a real name, or add results.
- * Every need ends with what a person approves: agents do the work, people make the decisions.
+ * Agents support the work. They do not perform licensed professional services, commit the company to a purchase,
+ * or deliver a financial conclusion without source data and a person's review. Every desk ends with who decides.
  */
 export const scenario = {
+  /**
+   * Optional photograph shown beside the opening. Leave null until an image BullNet has the right to publish
+   * is added under public/assets/scenario/. The section is laid out to work without it.
+   */
+  photo: null as null | { src: string; alt: string; width: number; height: number },
   facts: [
     { value: '15', label: 'Employees', note: 'Five years in business' },
-    { value: '2,000 SF', label: 'Industrial flex space', note: 'Outgrown' },
-    { value: '600 units', label: 'New construction job', note: 'For a national developer' },
-    { value: '1 county', label: 'Service area', note: 'Palm Beach County' },
+    { value: '600', label: 'New units', note: 'One development contract' },
+    { value: '3', label: 'New trucks', note: 'And the crews to fill them' },
+    { value: '1', label: 'Private AI office', note: 'Built to suit' },
   ],
-  needs: [
+  pressure: [
+    { name: 'Staffing', text: 'Ten electricians and a project manager, hired and onboarded fast.' },
+    { name: 'Facilities', text: 'Two thousand square feet of flex space is no longer enough.' },
+    { name: 'Vehicles', text: 'Three more trucks, bought or financed, insured and kept on the road.' },
+    { name: 'Suppliers', text: 'Bigger orders, longer lead times, supplier credit and warranties to track.' },
+    { name: 'Cash flow', text: 'Payroll and materials go out before progress payments come in.' },
+    { name: 'The existing business', text: 'The residential customers who built the company still expect a call back.' },
+  ],
+  flightSheet: [
+    { q: 'What the contract requires', a: 'People, trucks, space, materials, insurance and working capital, on the developer’s schedule.' },
+    { q: 'What the business supports today', a: 'Taken from the owner’s own records and numbers, not from assumptions.' },
+    { q: 'Where the gaps are', a: 'The list the office is designed around. No gap, no desk.' },
+  ],
+  desks: [
     {
-      need: 'Hire ten electricians and a project manager',
-      build: 'Hiring desk agent',
-      does: 'Drafts the job posts, keeps applicants in one list, schedules interviews, and tracks licences, certifications and onboarding paperwork for each new hire.',
-      human: 'The owner decides every hire.',
+      name: 'Hiring',
+      need: 'Ten electricians and a project manager',
+      supports: 'Organizes applicants, credentials, interview schedules and onboarding checklists.',
+      human: 'The owner and hiring manager approve every job offer.',
     },
     {
-      need: 'Run the 600-unit job',
-      build: 'Project agent',
-      does: 'Keeps submittals, requests for information, change orders, material takeoffs and the schedule in one place for the project manager, and flags what is late.',
+      name: 'Project',
+      need: 'Run the 600-unit job without losing the thread',
+      supports: 'Keeps submittals, requests for information, change orders, material takeoffs and the schedule in one place, and flags what is late.',
       human: 'The project manager approves anything that goes to the developer.',
     },
     {
+      name: 'Fleet',
       need: 'Three more trucks',
-      build: 'Hive Capital Markets',
-      does: 'Pencils the trucks: payment, coverage and how busy each one has to be to pay for itself. Sets out procurement terms and introduces lenders where they fit.',
-      human: 'The owner signs. The lender sets the terms.',
+      supports: 'Lays out the purchase math from the owner’s own numbers: payment, coverage and how busy each truck has to be to pay for itself. Tracks registration, insurance and maintenance dates.',
+      human: 'The owner signs. A lender sets the terms. BullNet is not a lender.',
     },
     {
-      need: 'A bigger building',
-      build: 'Space intelligence agent',
-      does: 'Turns headcount, trucks and inventory into a space requirement, gathers market intel on what is available, and pencils staying against moving.',
+      name: 'Facilities',
+      need: 'More room than 2,000 square feet',
+      supports: 'Turns headcount, trucks and inventory into a space requirement, and compares the cost of staying against moving.',
       human: 'The owner picks the building. A licensed broker handles the lease. BullNet does not.',
     },
     {
-      need: 'Two people on the front desk',
-      build: 'Front desk agent',
-      does: 'Answers and routes calls and web requests, books estimates and keeps the schedule, so the two new coordinators handle the work that needs a person.',
-      human: 'Staff handle anything the agent hands off, and set what it may say.',
+      name: 'Operations',
+      need: 'The front desk, suppliers and warranties',
+      supports: 'Routes calls and web requests, keeps the schedule, and tracks supplier quotes, lead times and warranty dates.',
+      human: 'Staff take anything handed off. The owner approves purchase orders and warranty commitments.',
     },
     {
-      need: 'Suppliers, manufacturers and warranties',
-      build: 'Supply agent',
-      does: 'Tracks supplier quotes and lead times, manufacturer terms, and warranty registrations and expiry dates for what the company installs.',
-      human: 'The owner approves purchase orders and warranty commitments.',
-    },
-    {
+      name: 'Finance',
       need: 'More risk on the books',
-      build: 'Compliance agent',
-      does: 'Tracks insurance certificates, bonding, licence renewals and contract deadlines, and prepares progress billing and lien waiver paperwork.',
-      human: 'The owner and his advisers review before anything is filed or sent.',
+      supports: 'Tracks insurance certificates, bonding, licence renewals and contract deadlines, and prepares progress billing and lien waiver paperwork for review. Figures come from source records and are recomputed by code.',
+      human: 'The owner and his accountant, insurer and attorney review before anything is filed, sent or relied on.',
     },
     {
-      need: 'Keep the residential business growing',
-      build: 'Service and marketing agent',
-      does: 'Follows up on estimates, asks finished customers for reviews, and drafts local marketing for the service area.',
+      name: 'Residential',
+      need: 'Keep the customers who built the company',
+      supports: 'Follows up on estimates, asks finished customers for reviews, and drafts local marketing for the service area.',
       human: 'The owner approves what goes out under the company name.',
     },
   ],

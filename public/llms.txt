@@ -52,7 +52,7 @@ Nine connected components. Except where noted, these are proposed capabilities t
 - [The Private AI Office](https://bullnet.ai/#office)
 - [The Node](https://bullnet.ai/#node)
 - [How it connects](https://bullnet.ai/#system)
-- [Example build](https://bullnet.ai/#example): an illustrative electrical contractor and the eight agents built for it
+- [Example build](https://bullnet.ai/#example): a fictional electrical contractor that wins a 600-unit contract, and the one private AI office built around what that growth requires
 - [More illustrative builds](https://bullnet.ai/#more-examples): an industrial asset owner and a cold-chain operator
 - [The Vault](https://bullnet.ai/#vault)
 - [Sovereign ID](https://bullnet.ai/#sovereign-id)

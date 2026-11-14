@@ -10,7 +10,7 @@ export const faq = [
   },
   {
     q: 'What is a private AI office?',
-    a: 'A private AI office is the workspace where one company\u2019s people and its approved AI agents work together. It has a staff of AI agents with written mandates, an organized store of the company\u2019s own information, an agreed place where the work runs, rules for what confidential data may be used, and tests that check each answer before a person relies on it. BullNet designs, builds and operates it.',
+    a: 'A private AI office gives one company\u2019s team a single place to work with the AI agents built for that business. People ask questions, organize projects, prepare reports and review the work there. Each agent has a defined responsibility and access only to information the company authorizes. There is no standard list of agents: each office is designed around the business. BullNet builds it, connects the computing it needs, and stays to operate and improve it. The agents do the legwork, and people make the decisions.',
   },
   {
     q: 'What is the BullNet Node?',

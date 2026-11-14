@@ -347,3 +347,30 @@ footer a{text-underline-offset:3px}
 .steps.five{grid-template-columns:repeat(5,minmax(0,1fr))}
 @media(max-width:1000px){.steps.five{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:480px){.steps.five{grid-template-columns:minmax(0,1fr)}}
+
+/* Private AI Office section: same readability as the example and Node sections, plus its own small pieces. */
+#office .steel{color:#B4BDC6;font-size:1rem}
+#office .mono.brass{font-size:.82rem}
+#office .stages p{font-size:1.02rem;color:#D3D8DC;line-height:1.55}
+#office .journey .stages div{align-content:start}
+#office .journey>.gap-s>p,#office .journey>p,#office .lede{font-size:1.08rem}
+#office dl.kv dt{font-size:.8rem;color:#B4BDC6}
+#office dl.kv dd{font-size:1.04rem}
+#office dl.kv .approve{color:var(--platinum)}
+#office dl.kv dd.approve{border-left:2px solid var(--platinum);padding-left:12px;font-weight:500}
+#office .note{font-size:1.05rem;color:var(--platinum)}
+#office .panel .ph{font-size:.8rem;color:#B4BDC6}
+#office .tag{font-size:.72rem}
+#office .pick button{font-size:.78rem}
+#office .ws{margin:0}
+#office .ws.phone{max-width:400px}
+.ws-gap{border-left:2px solid var(--review);padding-left:12px;color:#E5E8EB}
+.ws-gap .mono{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--review);margin-right:6px}
+.approve-line{color:var(--platinum);font-weight:500;border-left:2px solid var(--platinum);padding-left:12px}
+.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.flow li{position:relative;border:1px solid var(--line);background:var(--graphite);padding:18px;display:grid;gap:6px;align-content:start}
+.flow li.on{border-color:var(--platinum)}
+.flow li strong{font-family:var(--display);font-stretch:112%;font-weight:800;text-transform:uppercase;font-size:1.05rem;line-height:1.2}
+.flow li>span:last-child{color:#C9CFD5;font-size:.98rem}
+.flow li+li::before{content:"";position:absolute;left:-28px;top:50%;width:28px;height:1px;background:var(--steel)}
+@media(max-width:760px){.flow{grid-template-columns:minmax(0,1fr)}.flow li+li::before{left:50%;top:-28px;width:1px;height:28px}}

@@ -35,7 +35,7 @@ Contact: build@bullnet.ai, +1 561 532 7120, https://x.com/bullnetai
 
 Nine connected components. Except where noted, these are proposed capabilities that are validated per deployment.
 
-- The Private AI Office: the premises. The workspace where a client's people and approved agents work, reached from a desk or a phone.
+- The Private AI Office: the customer-facing product. One private workspace where a client's people work with AI agents built for that business, reached from a desk or a phone. There is no standard agent roster; each office is designed around the business. A Chief of Staff review agent is proposed and not yet a production feature.
 
 - The Swarm: specialized AI agents, each with a written mandate, authorized data sources, approved tools and human escalation rules.
 - The Hive: private domain knowledge, separated into BullNet datasets, public and licensed information, client confidential information and generated work products.

@@ -16,6 +16,9 @@ These are mandatory for every change to copy, content config or demos.
 - Describe a vertical as available before it exists. Offered today: commercial real estate, and equipment and hardware acquisition (Hive Capital Markets)
 - Lead with the technology. Lead with what the business gets; the Node, the Swarm, the workspace and the infrastructure explain how it is delivered
 - Say a person approves every operation. A person approves every consequential decision; routine authorized automation runs without per-step sign-off
+- Imply a fixed or standard roster of agents. Each office is designed around the business; the desks in the contractor example are one fictional configuration
+- Describe the Chief of Staff, cross-agent workflows or document-grounded answers as production features before they are tested
+- Show a real workspace screenshot before a sanitized, publication-approved capture exists
 - Describe the Node as required. It is optional; an office can run on BullNet Infrastructure
 - Describe a connected job as automatically private or sovereign
 - Say "fine-tuned" unless a model was actually trained and tested for that job. The umbrella phrase is "tuned to suit"

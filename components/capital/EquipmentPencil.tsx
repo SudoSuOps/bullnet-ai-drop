@@ -51,7 +51,7 @@ export function EquipmentPencil() {
             </div>
             <div className="panel">
               <div className="ph mono"><span>The math</span><span>Runs in your browser</span></div>
-              <div className="pb scroll">
+              <div className="pb scroll" tabIndex={0} role="region" aria-label="Equipment check results. Scroll sideways to see all of it.">
                 <table style={{ minWidth: 380 }} aria-label="Equipment acquisition arithmetic">
                   <tbody>
                     <tr><th scope="row" className="rowh">Amount financed</th><td className="num">{dollars(r.financed)}</td></tr>

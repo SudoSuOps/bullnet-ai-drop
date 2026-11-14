@@ -27,7 +27,7 @@ export function FlightSheetSection() {
                 <dt>Acceptance</dt><dd>Every deterministic test passes and every figure traces to a source version</dd>
                 <dt>Validation</dt><dd><span className={STATUS_CLASS[r.status]} style={{ fontFamily: 'var(--mono)', fontSize: '.78rem', letterSpacing: '.06em' }}>{r.status}</span> on DEF-CAP-001</dd>
               </dl>
-              <div className="scroll"><table style={{ minWidth: '360px' }} aria-label="Cap rate sensitivity, hypothetical"><thead><tr><th scope="col">Scenario</th><th scope="col" className="num">Cap rate</th><th scope="col" className="num">Recomputed value</th></tr></thead><tbody>
+              <div className="scroll" tabIndex={0} role="region" aria-label="Cap rate sensitivity table. Scroll sideways to see all of it."><table style={{ minWidth: '360px' }} aria-label="Cap rate sensitivity, hypothetical"><thead><tr><th scope="col">Scenario</th><th scope="col" className="num">Cap rate</th><th scope="col" className="num">Recomputed value</th></tr></thead><tbody>
     {rows.length === 0 ? (<tr><td colSpan={3}>Enter valid validator inputs to calculate.</td></tr>) : rows.map((x) => (
     <tr key={x.label}><th scope="row" style={{ font: 'inherit', textTransform: 'none', letterSpacing: 0, color: '#AEB6BE' }}>{x.label}</th><td className="num">{x.capPct.toFixed(2)}%</td><td className="num" style={{ color: 'var(--platinum)' }}>{usd(x.value)}</td></tr>
     ))}

@@ -41,8 +41,8 @@ export function Scenario() {
           )}
           <div className="gap">
             <p className="mono brass">BullNet / Built-to-suit example</p>
-            <p className="pull" style={{ maxWidth: '20ch' }}>One contract. A different-sized business.</p>
-            <p><span className="mono brass">01 The opportunity</span><br />An electrical contractor in Palm Beach County. Fifteen employees, five years in, working out of 2,000 square feet of industrial flex space. He has just been awarded the electrical work on a 600-unit development. It is the biggest commitment the company has ever made.</p>
+            <p className="pull" style={{ maxWidth: '20ch' }}>One project. A different-sized business.</p>
+            <p><span className="mono brass">01 The opportunity</span><br />An electrical contractor in Palm Beach County. Fifteen employees, five years in, working out of 2,000 square feet of industrial flex space. He has just been awarded the electrical work on a 600-unit development. It is the biggest job the company has ever been awarded.</p>
           </div>
         </div>
         <div className="tiles" aria-label="The company and the job" style={{ marginTop: 'clamp(24px,3vw,40px)' }}>
@@ -65,7 +65,7 @@ export function Scenario() {
           <div className="gap-s">
             <p className="mono brass">03 The Flight Sheet</p>
             <h3>First question: does the growth pencil?</h3>
-            <p>A 600-unit contract is not automatically a profitable one. Before any technology is prescribed, BullNet sits down with the owner and writes a Growth Flight Sheet: what the commitment requires, what the business can support today, where the gaps are, and whether the timing works. The office is designed around the gaps.</p>
+            <p>A 600-unit project is not automatically a profitable one. Before any technology is prescribed, BullNet sits down with the owner and writes a Growth Flight Sheet: what the project requires, what the business can support today, where the gaps are, and whether the timing works. The office is designed around the gaps.</p>
             <p className="steel">The Flight Sheet works from the contractor’s own documents and numbers. It is decision support, reviewed by the owner and his advisers. It is not financial, legal or tax advice.</p>
           </div>
           <div className="panel">

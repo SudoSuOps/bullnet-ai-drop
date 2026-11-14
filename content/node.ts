@@ -4,6 +4,8 @@
  * not a catalogue. Do not add prices, performance figures, certifications or availability dates here.
  * A developer kit is called a developer kit. A render is captioned as a render.
  */
+export type HardwareStatus = 'In operation' | 'In development' | 'Design concept' | 'Proposed configuration';
+
 export const node = {
   functions: [
     {
@@ -48,9 +50,65 @@ export const node = {
     },
   ],
   /**
-   * Four proposed configurations. None is a finalized or certified product.
-   * Each build carries its own evidence: tested at BullNet (founder-operated equipment), development hardware, or design concept.
+   * Hardware, by evidence. Status is one of:
+   *   'In operation'            running in BullNet's own operation, with evidence on file (photo of it running, system output)
+   *   'In development'          being built and tested; not yet documented as in operation
+   *   'Design concept'          a render or drawing
+   *   'Proposed configuration'  not built
+   * Owning the hardware, or having a render of it, is not enough for 'In operation'. Upgrade one item at a time as evidence arrives.
+   * The page shows a "Hardware we operate" group only when at least one item is 'In operation'.
    */
+  hardware: [
+    {
+      id: 'jetson',
+      status: 'In development',
+      name: 'Jetson Orin Nano edge box',
+      what: 'An NVIDIA Jetson Orin Nano developer kit, intended to run small models on site. It is development hardware, and it does not host the office workspace.',
+      img: { src: '/assets/node/jetson-orin-nano-dev-kit.webp', alt: 'Photograph of an NVIDIA Jetson Orin Nano developer kit on a workbench cutting mat: a small circuit board with a fan-cooled module, USB ports, a network port and a display port', width: 1400, height: 1050 },
+      caption: 'Photograph of the developer kit on our bench.',
+    },
+    {
+      id: 'edge-case',
+      status: 'Design concept',
+      name: 'BullNet Edge printed enclosure',
+      what: 'An enclosure we are designing to 3D print for the edge unit, with a top fan and an open port bay. The camera and voice add-ons shown are concepts.',
+      img: { src: '/assets/node/edge-case-concept.webp', alt: 'Concept render titled BullNet Edge Gold: a 3D-printed case holding a small single-board computer, with a top fan carrying the BullNet B and an open bay showing its USB, network and power ports. Two smaller views show a camera and a microphone attached.', width: 1400, height: 788 },
+      caption: 'Concept render. Accessory fit to be verified.',
+    },
+    {
+      id: 'cube',
+      status: 'In development',
+      name: 'ZimaCube Pro business cube',
+      what: 'A six-bay ZimaCube Pro, being configured with a 24GB NVIDIA professional graphics card. The card and its fit, power and drivers in this chassis are being validated.',
+      img: { src: '/assets/node/business-cube-concept.webp', alt: 'Illustrative render of a black cube-shaped server with a ribbed front panel, front ports and a BullNet badge', width: 1000, height: 1000 },
+      caption: 'Illustrative render. Not a photograph of the unit.',
+    },
+    {
+      id: 'compact',
+      status: 'In development',
+      name: 'ZimaBoard 2 compact server',
+      what: 'A single-board server with drives attached and a low-profile NVIDIA graphics card, being validated for documents, light agents and small models.',
+      img: null,
+      caption: '',
+    },
+    {
+      id: 'gpu-build',
+      status: 'In development',
+      name: 'ZimaBoard 2 with a full-size graphics card',
+      what: 'The same compact board with an RTX 5080 on separate power. Slot bandwidth, power delivery, cooling, driver and operating system are being validated.',
+      img: null,
+      caption: '',
+    },
+    {
+      id: 'storage',
+      status: 'Proposed configuration',
+      name: 'Network storage unit',
+      what: 'A multi-drive network storage unit for documents and backups. Not built yet.',
+      img: null,
+      caption: '',
+    },
+  ],
+  /** Four example configurations. The Node is not a fixed product; each one is designed around the business. */
   configs: [
     {
       name: 'Node Edge',
@@ -62,29 +120,7 @@ export const node = {
       manages: 'Setup, updates, monitoring and agent configuration.',
       yours: 'Physical security, power, internet and user approvals.',
       note: '',
-      builds: [
-        {
-          name: 'Jetson Orin Nano developer kit',
-          evidence: 'Tested at BullNet',
-          what: 'An NVIDIA developer kit that runs small models on site. It is development hardware, and it does not host the office workspace.',
-          img: { src: '/assets/node/jetson-orin-nano-dev-kit.webp', alt: 'Photograph of an NVIDIA Jetson Orin Nano developer kit on a workbench cutting mat: a small circuit board with a fan-cooled module, USB ports, a network port and a display port', width: 1400, height: 1050 },
-          caption: 'Photograph of the developer kit on our bench.',
-        },
-        {
-          name: 'BullNet Edge printed case',
-          evidence: 'Design concept',
-          what: 'A case we design and 3D print for the edge unit, with a top fan and an open port bay. The camera and voice add-ons shown are concepts.',
-          img: { src: '/assets/node/edge-case-concept.webp', alt: 'Concept render titled BullNet Edge Gold: a 3D-printed case holding a small single-board computer, with a top fan carrying the BullNet B and an open bay showing its USB, network and power ports. Two smaller views show a camera and a microphone attached.', width: 1400, height: 788 },
-          caption: 'Concept render. Accessory fit to be verified.',
-        },
-        {
-          name: 'ZimaBoard 2 with a low-profile graphics card',
-          evidence: 'Tested at BullNet',
-          what: 'A single-board server with drives attached and an NVIDIA T1000 card. Documents, light agents and small models.',
-          img: null,
-          caption: '',
-        },
-      ],
+      from: ['jetson', 'edge-case', 'compact'],
     },
     {
       name: 'Node Business',
@@ -96,15 +132,7 @@ export const node = {
       manages: 'Setup, updates, monitoring, storage layout and agent configuration.',
       yours: 'Physical security, power, internet, user approvals and drive replacement decisions.',
       note: '',
-      builds: [
-        {
-          name: 'ZimaCube Pro with a 24GB graphics card',
-          evidence: 'Tested at BullNet',
-          what: 'Six drive bays and an NVIDIA RTX PRO 4000 Blackwell card in its low-profile SFF form, the version this chassis can power and fit.',
-          img: { src: '/assets/node/business-cube-concept.webp', alt: 'Illustrative render of a black cube-shaped server with a ribbed front panel, front ports and a BullNet badge', width: 1000, height: 1000 },
-          caption: 'Illustrative render. Not a photograph of the unit.',
-        },
-      ],
+      from: ['cube'],
     },
     {
       name: 'Node Vault',
@@ -116,48 +144,29 @@ export const node = {
       manages: 'Setup, access rules, the backup schedule and restore tests.',
       yours: 'Physical security, and deciding what is kept and for how long.',
       note: 'Drive redundancy is not a backup, so a second copy is kept somewhere else. Node Vault is storage hardware. The Vault is the policy that governs who may use what.',
-      builds: [
-        {
-          name: 'Network storage unit',
-          evidence: 'Proposed',
-          what: 'A multi-drive network storage unit. No unit has been tested at BullNet yet.',
-          img: null,
-          caption: '',
-        },
-      ],
+      from: ['storage'],
     },
     {
       name: 'Node Compute',
       line: 'Dedicated graphics hardware for heavier AI work.',
-      does: 'Runs larger models on site at useful speed.',
+      does: 'Runs larger models on site.',
       who: 'A business whose document volume or model size is too much for a small box.',
       local: 'Larger models and the agents that use them.',
       more: 'Work beyond what the installed card can carry.',
       manages: 'Setup, model deployment, updates and monitoring.',
       yours: 'Physical security, and power and cooling for the room.',
       note: '',
-      builds: [
-        {
-          name: 'ZimaBoard 2 with an RTX 5080',
-          evidence: 'Tested at BullNet',
-          what: 'The compact board with a full-size graphics card on its own power supply.',
-          img: null,
-          caption: '',
-        },
-      ],
+      from: ['gpu-build'],
     },
   ],
   workflow: {
     ask: 'Which electrical submittals are outstanding, and what changed in the latest drawing revision?',
     steps: [
-      { t: 'He asks', d: 'The project manager asks in the private AI office.' },
-      { t: 'Records are retrieved', d: 'The system pulls the project records he is permitted to see.' },
-      { t: 'Revisions are compared', d: 'A specialized agent compares the approved document revisions.' },
-      { t: 'The Node does the work', d: 'Supported processing runs on site.' },
-      { t: 'Sources are attached', d: 'Differences are assembled with a reference to each source.' },
-      { t: 'The answer is checked', d: 'Validation flags unsupported claims and missing evidence.' },
-      { t: 'He gets a report', d: 'A report he can read, question and review.' },
-      { t: 'A person decides', d: 'He decides what to issue or change.' },
+      { t: 'Files are added', d: 'Approved project files are added to the local document library.' },
+      { t: 'The Node processes them', d: 'The Node processes supported content and makes it searchable.' },
+      { t: 'A question is asked', d: 'A project manager asks a question through the private AI office.' },
+      { t: 'An answer is prepared', d: 'The system prepares an answer with document references and identified exceptions.' },
+      { t: 'A person reviews', d: 'A person reviews the findings before acting.' },
     ],
   },
   control: [

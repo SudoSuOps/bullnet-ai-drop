@@ -14,7 +14,7 @@ export const faq = [
   },
   {
     q: 'What is the BullNet Node?',
-    a: 'The BullNet Node is a private AI computer that sits inside a client\u2019s business. It runs approved models and agents on the client\u2019s information, on site, and connects to BullNet only when the client authorizes it. The Node is optional: an office can also run on BullNet Infrastructure, the private compute BullNet owns and operates. BullNet runs Node-class equipment in its own operation today. A customer\u2019s Node is built to suit and tested before it is relied on. No prices or performance figures are published.',
+    a: 'The BullNet Node is a private AI computer that sits inside a client\u2019s business. It runs approved models and agents on the client\u2019s information, on site, and connects to BullNet only when the client authorizes it. The Node is optional: an office can also run on BullNet Infrastructure, the private compute BullNet owns and operates. The Node is not a fixed product. It is a deployment configuration designed around the business. BullNet is developing and testing Node hardware; a customer\u2019s Node is built to suit and tested before it is relied on. No prices or performance figures are published.',
   },
   {
     q: 'Will a private AI office disrupt how my business runs today?',

@@ -30,8 +30,9 @@ These are mandatory for every change to copy, content config or demos.
 | Proposed capability | Designed, and validated per deployment before it is relied on. |
 | Illustrative demonstration | Example data. Not a client, a transaction or a live service. |
 | Design concept | Physical or visual concept. No specifications implied. |
-| Tested at BullNet | Equipment BullNet runs in its own operation, on the founder's statement. Not a customer deployment and not a performance claim. Used only inside the Node section. |
-| Proposed configuration | A Node configuration that is not a finalized or certified product. |
+| In operation | Hardware running in BullNet's own operation, with evidence on file: a photo of it running and system output. Owning the hardware or having a render is not enough. |
+| In development | Hardware being built and tested. Not yet documented as in operation. |
+| Proposed configuration | A Node configuration or unit that is not built, finalized or certified. |
 
 ## Status vocabulary (Defendable)
 `MATHEMATICALLY VERIFIED`, `EVIDENCE SUPPORTED`, `INCONCLUSIVE`, `FAILED`, `REQUIRES HUMAN REVIEW`. Status is always written in words. Colour is added on top and is never the only signal.

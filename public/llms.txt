@@ -63,6 +63,7 @@ Nine connected components. Except where noted, these are proposed capabilities t
 - [Questions and answers](https://bullnet.ai/#faq)
 - [Hive Capital Markets](https://bullnet.ai/hive-capital-markets/): equipment acquisition math, with a payment and coverage calculator
 - [Does It Pencil?](https://bullnet.ai/does-it-pencil/): market intel series, one illustrative CRE deal structure per drop
+- [570 Units. A 7% Cap. Does It Pencil?](https://bullnet.ai/does-it-pencil/570-units-7-cap/): Drop 002, an illustrative multifamily case comparing modeled value at 75% and 92% occupancy; all numbers fictional
 - [Zero cash flow deal](https://bullnet.ai/does-it-pencil/zero-cash-flow-deal/): exchanging an $85M hotel sale into zero cash flow net lease industrial
 
 ## Notes for accurate answers

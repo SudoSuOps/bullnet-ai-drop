@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { formatDate, type Drop } from '@/content/drops';
 import { ExchangeCheck } from '@/components/pencil/ExchangeCheck';
+import { CaseView } from '@/components/pencil/CaseView';
 
 const STATUS_CLASS: Record<Drop['verdict']['status'], string> = {
   'MATHEMATICALLY VERIFIED': 'v-pass',
@@ -11,6 +12,7 @@ const STATUS_CLASS: Record<Drop['verdict']['status'], string> = {
 };
 
 export function DropView({ drop }: { drop: Drop }) {
+  if (drop.module?.kind === 'multifamily' && drop.caseBlocks) return <CaseView drop={drop} mod={drop.module} c={drop.caseBlocks} />;
   return (
     <article>
       <section className="drophead">

@@ -48,7 +48,8 @@ export function NodeSection() {
         {/* 02 The equipment: what we operate (shown only when evidenced), what we are developing, and what we configure to suit */}
         <div className="journey">
           <div className="gap-s"><p className="mono brass">02 The equipment</p><h3>One business. The right Node.</h3>
-            <p>We pencil the equipment before we prescribe it. The Node is not a fixed product. It is a deployment configuration designed around your business’s requirements: it could be built from the hardware below, something larger, or equipment you already own.</p></div>
+            <p>We pencil the equipment before we prescribe it. The Node is not a fixed product. It is a deployment configuration designed around your business’s requirements: it could be built from the hardware below, something larger, or equipment you already own.</p>
+            <p className="note">We also design and build custom compute to a client’s specification. What you see here is a baseline, not the ceiling.</p></div>
 
           {operating.length > 0 && (
             <div className="gap-s">

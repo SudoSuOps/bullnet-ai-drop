@@ -13,12 +13,12 @@ export const scenario = {
   facts: [
     { value: '15', label: 'Employees', note: 'Five years in business' },
     { value: '600', label: 'New units', note: 'One development contract' },
-    { value: '3', label: 'New trucks', note: 'And the crews to fill them' },
+    { value: '2,000 SF', label: 'Current facility', note: 'Industrial flex space, outgrown' },
     { value: '1', label: 'Private AI office', note: 'Built to suit' },
   ],
   pressure: [
     { name: 'Staffing', text: 'Ten electricians and a project manager, hired and onboarded fast.' },
-    { name: 'Facilities', text: 'Two thousand square feet of flex space is no longer enough.' },
+    { name: 'Facilities', text: 'The 2,000 SF industrial flex space cannot hold the crews, trucks and material.' },
     { name: 'Vehicles', text: 'Three more trucks, bought or financed, insured and kept on the road.' },
     { name: 'Suppliers', text: 'Bigger orders, longer lead times, supplier credit and warranties to track.' },
     { name: 'Cash flow', text: 'Payroll and materials go out before progress payments come in.' },
@@ -46,25 +46,25 @@ export const scenario = {
       name: 'Fleet',
       need: 'Three more trucks',
       supports: 'Lays out the purchase math from the owner’s own numbers: payment, coverage and how busy each truck has to be to pay for itself. Tracks registration, insurance and maintenance dates.',
-      human: 'The owner signs. A lender sets the terms. BullNet is not a lender.',
+      human: 'The owner approves the purchase and signs for it. A lender sets the terms. BullNet is not a lender.',
     },
     {
       name: 'Facilities',
-      need: 'More room than 2,000 square feet',
+      need: 'More room than the 2,000 SF flex space',
       supports: 'Turns headcount, trucks and inventory into a space requirement, and compares the cost of staying against moving.',
-      human: 'The owner picks the building. A licensed broker handles the lease. BullNet does not.',
+      human: 'The owner approves the building and the lease. A licensed broker handles the lease. BullNet does not.',
     },
     {
       name: 'Operations',
       need: 'The front desk, suppliers and warranties',
       supports: 'Routes calls and web requests, keeps the schedule, and tracks supplier quotes, lead times and warranty dates.',
-      human: 'Staff take anything handed off. The owner approves purchase orders and warranty commitments.',
+      human: 'The owner approves purchase orders and warranty commitments. Staff take anything the desk hands off.',
     },
     {
       name: 'Finance',
       need: 'More risk on the books',
       supports: 'Tracks insurance certificates, bonding, licence renewals and contract deadlines, and prepares progress billing and lien waiver paperwork for review. Figures come from source records and are recomputed by code.',
-      human: 'The owner and his accountant, insurer and attorney review before anything is filed, sent or relied on.',
+      human: 'The owner approves what is filed and sent, after his accountant, insurer and attorney have reviewed it.',
     },
     {
       name: 'Residential',
@@ -73,4 +73,16 @@ export const scenario = {
       human: 'The owner approves what goes out under the company name.',
     },
   ],
+  /** Illustrative exchange in the office workspace. A concept, not a transcript and not a live product screen. */
+  workspace: {
+    channels: ['town-square', 'hiring-desk', 'project-desk', 'fleet-desk', 'finance-desk', 'flight-sheets'],
+    active: 'hiring-desk',
+    ask: 'What do we need to get the 600-unit job staffed?',
+    reply: [
+      'From the approved Flight Sheet: ten electricians and one project manager.',
+      'Candidate tracking is set up, with applicants, licences and interview times in one list.',
+      'Draft job postings are ready for your review. Nothing is posted until you approve it.',
+    ],
+    waiting: 'Waiting on: owner approval of the draft postings',
+  },
 } as const;

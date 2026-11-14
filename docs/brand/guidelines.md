@@ -1,21 +1,27 @@
 # Brand guidelines (locked 2026-11-13)
 
-## Positioning (set 2026-11-13)
+## Positioning (updated 2026-11-14)
 
-**BullNet is a private AI office.** It delivers working AI in specific verticals, powered by compute it owns, built on real-world experience.
+**BullNet builds private AI offices to suit.** It is a service provider for small and mid-size companies that run on real estate and equipment.
 
 | Line | Text |
 | --- | --- |
 | Headline | Your Private AI Office. |
 | Support | Your data. Your intelligence. Your next move. |
+| Descriptor | Build-to-suit private AI offices |
 | Thesis | The last mile of intelligence. |
 | Proof | 30 years in the trenches. Built for the agent economy. |
 
-- Commercial real estate is the first vertical and the proof. Do not describe other verticals as available until one is.
-- Family offices are an audience, not the definition of the company.
-- Hive Capital Markets is a named desk of BullNet, always shown with the B and "by BullNet". It has no logo of its own. Its page is `/hive-capital-markets/`; hivecapitalmarkets.com should redirect there.
+- **What we sell:** custom builds (back office agents and customer-facing support), infrastructure management, data organization, hardware and equipment acquisition.
+- **How we earn:** build fees, plus a lender-paid fee when a financing we penciled closes. Say so wherever financing is discussed.
+- **The middle:** a broker stands between buyer and seller; BullNet stands between a business and the AI it needs.
+- **Custom, not off the shelf:** one agent per need, like a single-tenant building built for one occupant.
+- **Human final approval** on every decision.
+- **Voice:** thirty years of real transactions. Plain, earned, specific. Never "development" experience; the founder's career was brokerage.
+- **Not:** a CRE brokerage or agent, a lender, a paper loan broker, a fund, a token project. Bricks and mortar are not the business.
+- Family offices and private capital are a secondary audience.
+- Hive Capital Markets is a named desk of BullNet, always shown with the B and "by BullNet". It means daily intelligence and procurement terms. Its page is `/hive-capital-markets/`; hivecapitalmarkets.com should redirect there.
 - The office metaphor maps to the system: Swarm is staff, Hive is files, Node is premises, Vault is the locked room, Flight Sheet is the work order.
-- "Office" must never read as productivity software. Always pair it with agents, mandates and tested answers.
 
 ## One B. One identity.
 The flowing B with the diagonal crossing and the green block is the only BullNet symbol. Do not redraw it, add horns, nodes, arrows or letters to it, or create logos for individual products. The Swarm, Hive, Node, Vault, Sovereign ID, Flight Sheet, Defendable and Capital Intelligence are capabilities inside one system and are distinguished by typography, linework and layout.

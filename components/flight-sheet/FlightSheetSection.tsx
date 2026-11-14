@@ -17,8 +17,8 @@ export function FlightSheetSection() {
           <div className="panel"><div className="ph mono"><span>FS-DEMO-0001 / Industrial underwriting</span><span className="brass">Hypothetical</span></div>
             <div className="pb gap">
               <dl className="kv">
-                <dt>Client</dt><dd>Example Family Office (fictional)</dd>
-                <dt>Objective</dt><dd>Test a direct-capitalization value for a 250,000 SF distribution building ahead of investment committee.</dd>
+                <dt>Client</dt><dd>Example Distribution Co. (fictional)</dd>
+                <dt>Objective</dt><dd>Test a direct-capitalization value for a 250,000 SF distribution building ahead of a purchase decision.</dd>
                 <dt>Classification</dt><dd>Confidential, client-owned</dd>
                 <dt>Permitted data</dt><dd>Client rent roll and trailing-12 statement; licensed market data; no external transfer</dd>
                 <dt>Agents</dt><dd>Lease abstraction, Underwriting, Mathematical validator</dd>

@@ -41,7 +41,7 @@ export default function HiveCapitalMarkets() {
             <p className="idx mono"><b>Equipment acquisition</b></p>
             <h1>Equipment acquisition.<br />Let&rsquo;s pencil it.</h1>
             <p className="hero-tag">Leverage the private AI office.</p>
-            <p className="lede">Acquisition math, financing scenarios and operator intelligence for equipment, hardware and productive assets.</p>
+            <p className="lede">Daily intelligence and procurement terms for equipment, hardware and productive assets. We are not paper brokers. We pencil the deal first, and the financing follows the math.</p>
             <div className="cta"><a className="btn" href="#pencil">Pencil a deal</a><Link className="btn ghost" href="/#flight-sheet">Send us the deal</Link></div>
           </div>
         </section>
@@ -88,7 +88,7 @@ export default function HiveCapitalMarkets() {
               <li><span className="steel">Phone</span> <a href="tel:+15615327120">561.532.7120</a></li>
             </ul>
             <p className="steel" style={{ fontSize: '.86rem' }}>
-              Hive Capital Markets is a desk of BullNet. BullNet is not a lender and does not make credit decisions. Any financing is provided by third-party lenders on their own terms and is subject to their approval. Nothing on this page is a loan offer, a commitment to lend, a rate quote, or financial, tax or legal advice.
+              Hive Capital Markets is a desk of BullNet. BullNet is not a lender and does not make credit decisions. Any financing is provided by third-party lenders on their own terms and is subject to their approval. A lender may pay BullNet a fee when a financing closes, and we tell you when that applies. Nothing on this page is a loan offer, a commitment to lend, a rate quote, or financial, tax or legal advice.
             </p>
           </div>
         </section>

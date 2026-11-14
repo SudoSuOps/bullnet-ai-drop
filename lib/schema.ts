@@ -2,7 +2,7 @@ import { faq } from '@/content/faq';
 
 export const SITE_URL = 'https://bullnet.ai';
 export const DESCRIPTION =
-  'BullNet is a private AI office: private agents, owned compute and tested answers, built on 30 years of commercial real estate experience.';
+  'BullNet builds private AI offices to suit for companies that run on real estate and equipment: custom agents, managed infrastructure and organized data.';
 
 /**
  * Structured data for search engines and AI assistants.
@@ -26,6 +26,8 @@ export const structuredData = {
       contactPoint: { '@type': 'ContactPoint', contactType: 'sales', email: 'build@bullnet.ai', telephone: '+1-561-532-7120' },
       knowsAbout: [
         'Private AI office',
+        'Custom AI agents for small and mid-size businesses',
+        'Equipment acquisition and financing math',
         'Commercial real estate',
         'Industrial real estate',
         'Cold storage and cold chain facilities',

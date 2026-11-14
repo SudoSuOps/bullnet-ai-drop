@@ -12,7 +12,7 @@ export function Footer() {
           <p><span className="tag b">Illustrative demonstration</span> Example data, not a client or a live service.</p></div>
         <div><p className="mono">Disclosures</p>
           <p>BullNet is not a real estate brokerage, a fund, a securities placement agent or an investment adviser. It provides analytical infrastructure and decision support. Clients retain authority over their information and their decisions.</p>
-            <p>Hive Capital Markets is a desk of BullNet. BullNet is not a lender. Any financing is provided by third-party lenders on their own terms.</p>
+            <p>Hive Capital Markets is a desk of BullNet. BullNet is not a lender. Any financing is provided by third-party lenders on their own terms. A lender may pay BullNet a fee when a financing closes.</p>
           <p>Nothing on this site is an offer of securities or a promise of investment results. AI agents are software workers. They are not licensed professionals and do not make fiduciary decisions.</p></div>
       </div>
     </footer>

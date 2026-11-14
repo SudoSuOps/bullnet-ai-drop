@@ -6,7 +6,7 @@
 export const faq = [
   {
     q: 'What is BullNet?',
-    a: 'BullNet is a private AI office. It designs, builds, deploys and evaluates private AI systems for one client and one mandate at a time, on bare-metal compute the founder owns and operates. Commercial real estate (CRE) is its first vertical, built on the founder\u2019s approximately 30 years of transaction experience.',
+    a: 'BullNet builds private AI offices to suit. It custom-builds AI agents for small and mid-size companies that run on real estate and equipment, such as warehouse operators, contractors and distributors, then manages the infrastructure, organizes the data and works out the math on equipment purchases. It runs on bare-metal compute the founder owns and operates, and it is built on the founder\u2019s approximately 30 years as a commercial real estate broker.',
   },
   {
     q: 'What is a private AI office?',
@@ -14,11 +14,15 @@ export const faq = [
   },
   {
     q: 'Who does BullNet serve?',
-    a: 'BullNet serves principals and firms who want AI working on their own data under their own control. Today that means family offices, private capital groups, commercial property owners, industrial and cold storage operators, CRE investment firms and asset managers. It is not a product for retail investors.',
+    a: 'BullNet serves small and mid-size companies that operate inside real estate and rely on equipment: warehouse and distribution operators, contractors, logistics and cold storage companies. It also works with property owners, family offices and private capital groups. It is not a product for retail investors.',
+  },
+  {
+    q: 'Why are BullNet\u2019s AI agents custom-built?',
+    a: 'Because off-the-shelf AI does not fit every business. BullNet builds each agent for one need, the way a single-tenant building is built for one occupant, and a business with many needs gets many agents. Each is tuned to the client\u2019s work and data, fitted into existing systems, and then managed, fixed and adjusted over time. A person gives final approval on every decision.',
   },
   {
     q: 'Is BullNet a commercial real estate brokerage?',
-    a: 'No. BullNet does not list, market or sell property. It is also not a fund, a securities placement agent or an investment adviser. BullNet provides analytical infrastructure and decision support, and clients keep authority over their information and their decisions.',
+    a: 'No. BullNet does not list, market or sell property, and it does not act as an agent in property transactions. It is also not a lender, a fund, a securities placement agent or an investment adviser. BullNet provides analytical infrastructure and decision support, and clients keep authority over their information and their decisions.',
   },
   {
     q: 'How is BullNet different from ChatGPT or another general AI assistant?',
@@ -42,7 +46,7 @@ export const faq = [
   },
   {
     q: 'What is Hive Capital Markets?',
-    a: 'Hive Capital Markets is the capital desk of BullNet. It works out the acquisition math for equipment, trucks, machinery, GPU infrastructure and commercial real estate: payment, coverage, break-even utilization and the scenarios that break a deal. It prepares lender-ready packages and can introduce clients to lenders. BullNet is not a lender, and any financing comes from third-party lenders on their own terms.',
+    a: 'Hive Capital Markets is the capital desk of BullNet. It works out the acquisition math for equipment, trucks, machinery, GPU infrastructure and commercial real estate: payment, coverage, break-even utilization and the scenarios that break a deal. It prepares lender-ready packages and can introduce clients to lenders. BullNet is not a lender, and any financing comes from third-party lenders on their own terms. A lender may pay BullNet a fee when a financing closes, and BullNet tells the client when that applies.',
   },
   {
     q: 'Does BullNet use blockchain or sell tokens?',

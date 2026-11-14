@@ -1,24 +1,28 @@
 # BullNet
 
-> BullNet is a private AI office. It designs, builds, deploys and evaluates private AI systems for one client and one mandate at a time: AI agents with written mandates, the client's data inside an agreed boundary, bare-metal compute the founder owns and operates, and deterministic testing of results. Commercial real estate (CRE) is its first vertical. Tagline: Your data. Your intelligence. Your next move.
+> BullNet builds private AI offices to suit. It custom-builds AI agents for small and mid-size companies that run on real estate and equipment (warehouse operators, contractors, distributors), manages the infrastructure, organizes the data and works out the math on hardware and equipment purchases. It runs on bare-metal compute the founder owns and operates. A person gives final approval on every decision. Tagline: Your data. Your intelligence. Your next move.
 
 Website: https://bullnet.ai
 Contact: build@bullnet.ai, +1 561 532 7120, https://x.com/bullnetai
 
 ## Key facts
 
-- BullNet is a private AI office and AI systems engineering operation. It is independent and founder-led.
+- BullNet is a service provider: a build-to-suit private AI office and AI systems engineering operation. It is independent and founder-led.
+- Services: custom agent builds (back office and customer-facing), infrastructure management, data organization, hardware and equipment acquisition.
+- Agents are custom-built, one per need. BullNet does not sell off-the-shelf AI.
+- BullNet earns build fees. A lender may also pay BullNet a fee when a financing it helped arrange closes.
 - A private AI office is a dedicated AI operation for one principal or firm, in the way a family office is a dedicated staff for one family's capital.
 - Verticals today: commercial real estate, and equipment and hardware acquisition through Hive Capital Markets, the capital desk of BullNet.
 - Hive Capital Markets works out acquisition and financing math and prepares lender-ready packages. BullNet is not a lender; financing comes from third-party lenders.
-- Audience: principals and firms who want AI on their own data under their own control. Today: family offices and private capital, plus industrial asset owners, logistics and cold storage operators, CRE investment firms, asset managers.
+- Audience: small and mid-size companies that operate inside real estate and rely on equipment. Also property owners, family offices and private capital groups.
 - Practice areas: industrial, cold chain, logistics and last mile, capital markets, family office systems.
 - The founder has approximately 30 years of commercial real estate transaction experience and approximately $8 billion in historical transaction volume. These figures describe the founder's prior career, are approximate and are not independently audited.
 - BullNet runs on privately controlled bare-metal compute that the founder owns and operates.
 
 ## What BullNet is not
 
-- Not a real estate brokerage. It does not list, market or sell property.
+- Not a real estate brokerage or agent. It does not list, market or sell property.
+- Not a lender and not a paper loan broker.
 - Not a fund, securities placement agent or investment adviser. It does not guarantee investment results.
 - Not a hyperscale cloud or a GPU rental platform.
 - Not a token project. It sells no tokens or tokenized investments.

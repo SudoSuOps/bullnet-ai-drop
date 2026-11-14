@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: { default: 'BullNet | Your Private AI Office', template: '%s | BullNet' },
   description: DESCRIPTION,
   alternates: { canonical: '/' },
-  keywords: ['private AI office', 'private AI agents', 'commercial real estate AI', 'family office AI', 'CRE underwriting', 'industrial real estate', 'cold storage', 'sovereign compute'],
+  keywords: ['private AI office', 'build-to-suit AI', 'custom AI agents', 'AI for warehouse and equipment companies', 'private AI agents', 'commercial real estate AI', 'family office AI', 'CRE underwriting', 'industrial real estate', 'cold storage', 'sovereign compute'],
   openGraph: {
     type: 'website',
     url: SITE_URL,

@@ -283,7 +283,7 @@ footer a{text-underline-offset:3px}
 .ws-who{font-size:.74rem !important;letter-spacing:.08em;text-transform:uppercase;color:#A9B3BD !important;display:flex;gap:8px;align-items:center}
 .ws-wait{font-size:.76rem !important;letter-spacing:.04em;color:var(--platinum) !important;border:1px solid var(--line);padding:8px 10px;justify-self:start}
 .ws figcaption{padding:10px 16px;border-top:1px solid var(--line);font-size:.9rem;color:#A9B3BD}
-@media(max-width:700px){.ws-body{grid-template-columns:1fr}.ws-nav{display:flex;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line);padding:0}.ws-nav li{white-space:nowrap;padding:10px 14px}}
+@media(max-width:700px){.ws-body{grid-template-columns:1fr}.ws-nav{display:flex;flex-wrap:wrap;border-right:0;border-bottom:1px solid var(--line);padding:0}.ws-nav li{white-space:nowrap;padding:10px 14px}}
 .convert{margin-top:clamp(40px,6vw,72px);border:1px solid var(--line);border-top:2px solid var(--platinum);background:var(--graphite);padding:clamp(22px,3.4vw,40px);display:grid;gap:16px}
 .convert h3{font-size:clamp(1.3rem,2.8vw,2rem);max-width:24ch}
 .convert p{max-width:62ch;font-size:1.05rem;color:#DCE0E4}
@@ -292,3 +292,12 @@ footer a{text-underline-offset:3px}
 
 /* Node section: let the diagram scroll inside its panel on narrow screens instead of widening the page. */
 #node .grid2>*,#node .grid2 .gap>*{min-width:0}
+
+/* Node diagram on narrow touchscreens: show that the panel scrolls. Edge shading appears only where content is cut off. */
+#node .pb.scroll{background:
+  linear-gradient(to right,var(--graphite) 40%,rgba(20,24,29,0)) left center/36px 100% no-repeat local,
+  linear-gradient(to left,var(--graphite) 40%,rgba(20,24,29,0)) right center/36px 100% no-repeat local,
+  linear-gradient(to right,rgba(229,232,235,.28),rgba(229,232,235,0)) left center/16px 100% no-repeat scroll,
+  linear-gradient(to left,rgba(229,232,235,.28),rgba(229,232,235,0)) right center/16px 100% no-repeat scroll}
+.swipe{display:none;padding:8px 16px;border-top:1px solid var(--line);color:#A9B3BD;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase}
+@media(max-width:540px){#node .swipe{display:block}}

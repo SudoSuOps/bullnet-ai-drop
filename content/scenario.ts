@@ -17,7 +17,7 @@ export const scenario = {
   } as null | { src: string; alt: string; width: number; height: number },
   facts: [
     { value: '15', label: 'Employees', note: 'Five years in business' },
-    { value: '600', label: 'New units', note: 'One development contract' },
+    { value: '600', label: 'New units', note: 'One major project award' },
     { value: '2,000 SF', label: 'Current facility', note: 'Industrial flex space, outgrown' },
     { value: '1', label: 'Private AI office', note: 'Built to suit' },
   ],
@@ -30,7 +30,7 @@ export const scenario = {
     { name: 'The existing business', text: 'The residential customers who built the company still expect a call back.' },
   ],
   flightSheet: [
-    { q: 'What the contract requires', a: 'People, trucks, space, materials, insurance and working capital, on the developer’s schedule.' },
+    { q: 'What the project requires', a: 'People, trucks, space, materials, insurance and working capital, on the developer’s schedule.' },
     { q: 'What the business supports today', a: 'Taken from the owner’s own records and numbers, not from assumptions.' },
     { q: 'Where the gaps are', a: 'The list the office is designed around. No gap, no desk.' },
     { q: 'Does the timing pencil?', a: 'Payroll, material deposits and supplier terms go out on one schedule. The developer’s payments come in on another, less retainage. The Flight Sheet lines the two up against available working capital, because a job can be profitable on paper and still run short of cash in the middle.' },

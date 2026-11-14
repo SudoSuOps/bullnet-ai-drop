@@ -20,7 +20,8 @@ export function NodeSection() {
         <div className="grid2">
           <div className="gap">
             <div className="panel"><div className="ph mono"><span>FIG. 05 / Front elevation and internal layers</span><span className="brass">Design concept</span></div>
-              <div className="pb scroll"><NodeDiagram layer={t.layer} /></div></div>
+              <div className="pb scroll" tabIndex={0} role="region" aria-label="Node diagram. Scroll sideways to see all of it."><NodeDiagram layer={t.layer} /></div>
+              <p className="swipe mono" aria-hidden="true">Swipe sideways to see the full diagram</p></div>
             <p className="steel" style={{ fontSize: '.88rem' }}>Physical design concept. No hardware specifications, certifications or availability commitments are stated or implied.</p>
           </div>
           <div className="gap">
@@ -31,7 +32,7 @@ export function NodeSection() {
         </div>
         <div style={{ marginTop: 'clamp(40px,6vw,72px)' }} className="gap">
           <div className="gap-s"><p className="mono brass">BullNet Infrastructure / the utility</p><h3 style={{ fontSize: 'clamp(1.2rem,2.4vw,1.8rem)' }}>Not a hyperscaler. A specialized intelligence operation.</h3><p className="steel">Private compute BullNet owns and operates, for the jobs an on-site Node cannot carry. <span className="tag b">Existing infrastructure</span></p></div>
-          <div className="scroll"><ol className="mono" style={{ display: 'flex', minWidth: '860px', border: '1px solid var(--line)' }} aria-label="From compute to work product">
+          <div className="scroll" tabIndex={0} role="region" aria-label="From compute to work product. Scroll sideways to see all six steps."><ol className="mono" style={{ display: 'flex', minWidth: '860px', border: '1px solid var(--line)' }} aria-label="From compute to work product">
             <li style={{ flex: '1', padding: '14px', borderRight: '1px solid var(--line)' }}><span className="brass">A</span><br />Physical compute</li>
             <li style={{ flex: '1', padding: '14px', borderRight: '1px solid var(--line)' }}><span className="brass">B</span><br />Local model inference</li>
             <li style={{ flex: '1', padding: '14px', borderRight: '1px solid var(--line)' }}><span className="brass">C</span><br />Domain-specific intelligence</li>

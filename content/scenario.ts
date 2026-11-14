@@ -6,10 +6,15 @@
  */
 export const scenario = {
   /**
-   * Optional photograph shown beside the opening. Leave null until an image BullNet has the right to publish
-   * is added under public/assets/scenario/. The section is laid out to work without it.
+   * Photograph shown beside the opening. Founder-generated image, confirmed 2026-11-14. It is illustrative and is
+   * captioned as such on the page. Set to null to hide it; the section is laid out to work without it.
    */
-  photo: null as null | { src: string; alt: string; width: number; height: number },
+  photo: {
+    src: '/assets/scenario/contractor-site.webp',
+    alt: 'Three electricians in hard hats and safety vests review plans on a table at a commercial construction site, with work vans parked behind them',
+    width: 1600,
+    height: 900,
+  } as null | { src: string; alt: string; width: number; height: number },
   facts: [
     { value: '15', label: 'Employees', note: 'Five years in business' },
     { value: '600', label: 'New units', note: 'One development contract' },

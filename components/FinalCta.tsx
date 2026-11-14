@@ -2,7 +2,7 @@ export function FinalCta() {
   return (
     <section className="final" id="contact">
       <div className="wrap gap">
-        <p className="idx mono"><b>14</b> Begin</p>
+        <p className="idx mono"><b>15</b> Begin</p>
         <svg width="72" height="72" style={{ color: 'var(--platinum)' }} viewBox="32 44 420 420" aria-hidden="true"><use href="#mark"/></svg>
     
         <h2>Your next move deserves its own AI office.</h2>

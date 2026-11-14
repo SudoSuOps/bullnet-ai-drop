@@ -11,7 +11,7 @@ import { DESCRIPTION, SITE_URL, structuredData } from '@/lib/schema';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: 'BullNet | Your Private AI Office', template: '%s | BullNet' },
+  title: { default: 'BullNet | We Build Private AI Offices', template: '%s | BullNet' },
   description: DESCRIPTION,
   alternates: { canonical: '/' },
   keywords: ['private AI office', 'build-to-suit AI', 'custom AI agents', 'AI for warehouse and equipment companies', 'private AI agents', 'commercial real estate AI', 'family office AI', 'CRE underwriting', 'industrial real estate', 'cold storage', 'sovereign compute'],
@@ -19,11 +19,11 @@ export const metadata: Metadata = {
     type: 'website',
     url: SITE_URL,
     siteName: 'BullNet',
-    title: 'BullNet | Your Private AI Office',
+    title: 'BullNet | We Build Private AI Offices',
     description: DESCRIPTION,
     images: [{ url: '/og.png', width: 1200, height: 630, alt: 'BullNet' }],
   },
-  twitter: { card: 'summary_large_image', site: '@bullnetai', title: 'BullNet | Your Private AI Office', description: DESCRIPTION, images: ['/og.png'] },
+  twitter: { card: 'summary_large_image', site: '@bullnetai', title: 'BullNet | We Build Private AI Offices', description: DESCRIPTION, images: ['/og.png'] },
 };
 
 export const viewport: Viewport = { themeColor: '#0B0F14', colorScheme: 'dark' };

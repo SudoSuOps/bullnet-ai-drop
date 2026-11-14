@@ -6,20 +6,32 @@
 export const site = {
   "components": [
     {
-      "k": "swarm",
+      "k": "office",
       "n": "01",
+      "name": "The Private AI Office",
+      "sub": "The premises",
+      "st": "Proposed capability",
+      "purpose": "The workspace where your people and your approved agents work together: channels for teams and projects, agents you can ask, requests, reviews and approvals in one place.",
+      "inp": "Questions and requests from your team; approved Flight Sheets; output from the Swarm.",
+      "out": "Reviewable answers, drafts and reports, each waiting on the person who approves it.",
+      "rel": "The front door to everything else. People reach it from a desk or a phone. The Swarm works behind it, and Defendable checks the work before it is shown as finished.",
+      "tb": "Designed as a separate workspace per client. Who can see each channel, agent and document is set per person."
+    },
+    {
+      "k": "swarm",
+      "n": "02",
       "name": "The Swarm",
       "sub": "Specialized agent workforce",
       "st": "Proposed capability",
-      "purpose": "Specialized AI agents, each engineered around one defined CRE workflow.",
+      "purpose": "Specialized AI agents, each built for one job in the client's business.",
       "inp": "An approved Flight Sheet; data the Vault has released to that agent; approved tools.",
       "out": "Draft analyses, abstracts and calculations, each tagged with the agent that produced it.",
-      "rel": "Reads from the Hive, runs on the Node, and hands every output to Defendable before a human sees it as finished.",
+      "rel": "Reads from the Hive, runs on a Node or on BullNet Infrastructure as the Flight Sheet states, and hands every output to Defendable before a human sees it as finished.",
       "tb": "An agent can touch only the data, tools and actions named in its mandate. Anything outside it escalates to a human."
     },
     {
       "k": "hive",
-      "n": "02",
+      "n": "03",
       "name": "The Hive",
       "sub": "Private domain intelligence",
       "st": "Proposed capability",
@@ -27,23 +39,35 @@ export const site = {
       "inp": "Curated datasets, licensed feeds, client-authorized documents, validated outputs.",
       "out": "Retrieval results with lineage: which source, which version, which store.",
       "rel": "Supplies the Swarm. Receives finished work from Defendable. Access is decided by the Vault.",
-      "tb": "Client stores are isolated per client. One client’s information is never pooled with another’s."
+      "tb": "Designed so each client's store is separate and one client's information is not pooled with another's. The separation method is confirmed per deployment."
     },
     {
       "k": "node",
-      "n": "03",
+      "n": "04",
       "name": "The Node",
-      "sub": "Sovereign edge AI appliance",
+      "sub": "Optional on-site compute",
       "st": "Design concept",
-      "purpose": "Local infrastructure that runs models, retrieval, agents, calculations and audit logging close to the data.",
+      "purpose": "A private AI computer inside your business. It runs approved models, retrieval, agents and calculations close to the data. It is the power on site, and it is optional.",
       "inp": "Power, an agreed network position, signed software and model packages.",
-      "out": "Local inference and a tamper-evident log of what ran.",
-      "rel": "The physical layer under every other component.",
-      "tb": "The deployment model fixes who holds the hardware and which connections leave the premises."
+      "out": "Local inference and a log of what ran.",
+      "rel": "Sits inside the client's environment. An office can run with a Node, without one, or with both. It connects to BullNet Infrastructure only when the client authorizes it.",
+      "tb": "What stays local and what may cross to BullNet Infrastructure is defined in advance on the Flight Sheet. Holding the hardware is not the control. The policy and its enforcement are."
+    },
+    {
+      "k": "infra",
+      "n": "05",
+      "name": "BullNet Infrastructure",
+      "sub": "The utility",
+      "st": "Existing infrastructure",
+      "purpose": "Private compute that BullNet owns and operates: larger models and more capacity than an on-site Node can carry.",
+      "inp": "Workloads a Flight Sheet authorizes to run off site; signed software and model packages.",
+      "out": "Model inference and processing, returned to the office.",
+      "rel": "The utility behind the office. Some offices run entirely on it. Others use it only for the jobs a Node cannot carry.",
+      "tb": "Work here is in BullNet custody under a written processing model. A connected job is not automatically private: what crosses is listed and approved first."
     },
     {
       "k": "vault",
-      "n": "04",
+      "n": "06",
       "name": "The Vault",
       "sub": "Confidential data authorization",
       "st": "Proposed capability",
@@ -55,23 +79,23 @@ export const site = {
     },
     {
       "k": "id",
-      "n": "05",
+      "n": "07",
       "name": "Sovereign ID",
       "sub": "Cryptographic identity",
       "st": "Proposed capability",
       "purpose": "Gives BullNet, each Node, each agent, each mandate and each work product a verifiable cryptographic identity.",
       "inp": "Key pairs, device records, credential issuance and revocation.",
       "out": "Signed manifests, document digests and short-lived access tokens.",
-      "rel": "Authenticates every participant in the other seven components.",
+      "rel": "Authenticates every participant in the other components.",
       "tb": "Identity proves who signed. It does not prove the signer was right, authorized in the real world, or uncompromised."
     },
     {
       "k": "flight",
-      "n": "06",
+      "n": "08",
       "name": "The Flight Sheet",
-      "sub": "Mandate and evidence",
+      "sub": "The work order",
       "st": "Proposed capability",
-      "purpose": "The standard work specification. It fixes objective, scope, data, calculations, tests and review points before work begins.",
+      "purpose": "The standard work order. Before work begins it fixes the business problem, the measurable win, the permitted data and actions, where the work runs, the tests and the person who approves.",
       "inp": "Client objective, authorized users, assumptions, acceptance conditions.",
       "out": "A completed evidence package: inputs, source versions, execution records, validation outcomes, exceptions, reviewer decisions.",
       "rel": "Instructs the Vault and the Swarm. Collects results from Defendable.",
@@ -79,7 +103,7 @@ export const site = {
     },
     {
       "k": "defend",
-      "n": "07",
+      "n": "09",
       "name": "Defendable",
       "sub": "Validate the validator",
       "st": "Proposed capability",
@@ -88,18 +112,6 @@ export const site = {
       "out": "One of five statuses per claim, with reproducible test output.",
       "rel": "Stands between the Swarm and the client. Nothing is marked verified without passing through it.",
       "tb": "Model confidence is never accepted as proof. Judgment calls are routed to a qualified human."
-    },
-    {
-      "k": "capital",
-      "n": "08",
-      "name": "Capital Intelligence",
-      "sub": "Transaction experience in systems",
-      "st": "Proposed capability",
-      "purpose": "The domain layer: underwriting, capital structure, debt and equity sensitivities, DCF, cap-rate and lease analysis, and investment committee support.",
-      "inp": "Deal documents, market data, the client’s own assumptions.",
-      "out": "Scenario comparisons and analysis packages for the people who decide.",
-      "rel": "Shapes what the Swarm is asked and what Defendable tests.",
-      "tb": "Decision support only. BullNet does not operate a fund, commit capital, place securities or give regulated investment advice."
     }
   ],
   "agents": [
@@ -292,14 +304,16 @@ export const site = {
   ],
   "deploy": [
     {
-      "n": "Client office",
+      "n": "Node in your office",
+      "kind": "BullNet Node",
       "hw": "On your premises",
       "data": "Stays on site",
       "link": "Outbound connections only as agreed",
       "agree": "Physical access, maintenance visits, update process"
     },
     {
-      "n": "Client-controlled environment",
+      "n": "Node in your controlled environment",
+      "kind": "BullNet Node",
       "hw": "Your data room or colocation cage",
       "data": "Within your environment",
       "link": "Your network policy governs",
@@ -307,6 +321,7 @@ export const site = {
     },
     {
       "n": "Dedicated private infrastructure",
+      "kind": "BullNet Infrastructure",
       "hw": "Single-tenant hardware reserved for you",
       "data": "On dedicated systems",
       "link": "Private connection to your office",
@@ -314,6 +329,7 @@ export const site = {
     },
     {
       "n": "BullNet-operated bare metal",
+      "kind": "BullNet Infrastructure",
       "hw": "Hardware BullNet owns and operates",
       "data": "In BullNet custody under a written processing model",
       "link": "Authenticated access for your named users",
@@ -428,6 +444,12 @@ export const site = {
       "what": "Installation in the agreed environment.",
       "you": "Site or environment access.",
       "we": "A deployed system and an operating runbook."
+    },
+    {
+      "name": "Shadow",
+      "what": "The build runs beside your current process. Its output is reviewed, not used, until it passes.",
+      "you": "Reviewer time. Your existing process keeps running unchanged.",
+      "we": "Reviewed output and a go-live decision for your approver."
     },
     {
       "name": "Ongoing service",

@@ -11,7 +11,7 @@ export function Expertise() {
   return (
     <section id="expertise">
       <div className="wrap">
-        <header className="sh"><p className="idx mono"><b>09</b> Industry expertise</p>
+        <header className="sh"><p className="idx mono"><b>13</b> Industry expertise</p>
           <h2>Five practices.<br />One operating discipline.</h2></header>
         <div className="exp">
           <Picker className="stack" label="Practice areas" value={i} onChange={setI} items={site.exp.map((x, n) => (<><span>0{n + 1}</span><span>{x.n}</span></>))} />

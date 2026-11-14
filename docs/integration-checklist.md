@@ -7,6 +7,9 @@ Nothing below is done by the code in this repository. Each item needs a named ow
 - [ ] "About 200 dials a day, by his own count" in the founder section
 - [ ] "Former national industrial team leadership" and "institutional investment sales" claims
 - [ ] "Existing infrastructure" label on founder-owned compute
+- [ ] "The workspace is built on Mattermost" in the Private AI Office section: confirm against the real deployment, edition and license
+- [ ] "Designed as a separate workspace per client" and the Hive separation wording: confirm the actual separation design
+- [ ] Agent roster: the system explorer and the contractor example still list different agents. Replace both once the roster is defined
 - [ ] Authorized founder photograph (the page shows a reserved frame)
 - [x] Public contact details: build@bullnet.ai, 561.532.7120, @bullnetai on X (added 2026-11-13)
 

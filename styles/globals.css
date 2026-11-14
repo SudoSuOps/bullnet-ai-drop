@@ -161,7 +161,7 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--brass);outline-o
 @media(min-width:800px){.fgrid{grid-template-columns:minmax(0,320px) minmax(0,1fr)}}
 .photo{max-width:320px}
 /* lifecycle */
-.life{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border:1px solid var(--line)}
+.life{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));border:1px solid var(--line)}
 .life button{background:transparent;border:0;border-right:1px solid var(--line);color:var(--steel);padding:14px 10px;text-align:left;cursor:pointer;font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;display:grid;gap:6px}
 .life button:last-child{border-right:0}
 .life button b{color:var(--brass);font-weight:500}

@@ -5,7 +5,7 @@ export function Hero() {
     <section className="hero">
       <div className="wrap hero-head">
         <p className="mono brass">Build-to-Suit Private AI Offices / Owned Compute / Human Final Approval</p>
-        <h1>Your private<br />AI <em>office.</em></h1>
+        <h1>We build<br />private AI <em>offices.</em></h1>
         <p className="hero-tag">Your data. Your intelligence. Your next move.</p>
       </div>
       <div className="wrap hero-body">

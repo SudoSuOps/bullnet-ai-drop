@@ -6,7 +6,7 @@
 
 | Line | Text |
 | --- | --- |
-| Headline | Your Private AI Office. |
+| Headline | We build private AI offices. |
 | Support | Your data. Your intelligence. Your next move. |
 | Descriptor | Build-to-suit private AI offices |
 | Thesis | The last mile of intelligence. |

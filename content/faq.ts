@@ -10,7 +10,19 @@ export const faq = [
   },
   {
     q: 'What is a private AI office?',
-    a: 'A private AI office is a dedicated AI operation that works for one principal or firm, the way a family office is a dedicated staff for one family\u2019s capital. It has a staff of AI agents with written mandates, a private store of the client\u2019s knowledge, an agreed place where the work runs, rules for what confidential data may be used, and tests that check each answer before a person relies on it.',
+    a: 'A private AI office is the workspace where one company\u2019s people and its approved AI agents work together. It has a staff of AI agents with written mandates, an organized store of the company\u2019s own information, an agreed place where the work runs, rules for what confidential data may be used, and tests that check each answer before a person relies on it. BullNet designs, builds and operates it.',
+  },
+  {
+    q: 'What is the BullNet Node?',
+    a: 'The BullNet Node is a private AI computer that sits inside a client\u2019s business. It runs approved models and agents on the client\u2019s information, on site, and connects to BullNet only when the client authorizes it. The Node is optional: an office can also run on BullNet Infrastructure, the private compute BullNet owns and operates. The Node is a design concept today, and no hardware specifications are published.',
+  },
+  {
+    q: 'Will a private AI office disrupt how my business runs today?',
+    a: 'It is designed not to. BullNet works one job at a time. Each build first runs in shadow, beside the current process, where its output is reviewed but not used. It goes live only after it passes its tests and a named person at the company signs off. Nothing the business relies on is replaced on day one.',
+  },
+  {
+    q: 'Does BullNet build its own AI models?',
+    a: 'Usually not, and it does not need to. The model is off the shelf and the agent is built to suit. BullNet uses the lowest of four rungs that does the job: a plain script with no AI model, a configured agent on a proven open model, a grounded agent that answers from the client\u2019s approved documents, or a fine-tuned model trained further on approved data. Fine-tuning is used only where the lower rungs test short.',
   },
   {
     q: 'Who does BullNet serve?',
@@ -33,8 +45,8 @@ export const faq = [
     a: 'A general assistant is one shared model that answers any question. BullNet builds a system for one client and one mandate. Its agents work under written mandates, only on data the client has authorized, in an environment the client approves. Numeric outputs are recomputed by deterministic tests, and judgment calls go to a qualified person.',
   },
   {
-    q: 'Where does confidential data go when a family office works with BullNet?',
-    a: 'That is agreed in writing for each engagement. A BullNet Node can run in the client’s office, in a client-controlled environment, on dedicated private infrastructure, or on bare-metal hardware BullNet operates under a written custody and processing model. Not every deployment is offline, and connectivity is part of what is agreed.',
+    q: 'Where does my data go, and does everything run locally?',
+    a: 'That is agreed in writing for each job. Work can run on a BullNet Node inside the client’s business, on BullNet Infrastructure that BullNet owns and operates under a written custody and processing model, or split between the two. Not every deployment is offline, and a connected job is not automatically private: what may leave the client’s environment is listed and approved before the work starts.',
   },
   {
     q: 'What is a Flight Sheet?',

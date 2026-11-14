@@ -13,10 +13,10 @@ export function SystemSection() {
   return (
     <section id="system">
       <div className="wrap">
-        <header className="sh"><p className="idx mono"><b>04</b> The complete system</p>
+        <header className="sh"><p className="idx mono"><b>06</b> How it connects</p>
           <h2>One mandate.<br />A purpose-built intelligence system.</h2>
-          <p className="lede">Think of it as an office. The Swarm is the staff, the Hive is the files, the Node is the premises, the Vault is the locked room and the Flight Sheet is the work order. Select a component to see what enters it, what leaves it and where its trust boundary sits.</p></header>
-        <div className="panel"><div className="ph mono"><span>FIG. 04 / System architecture</span><span>Select a component</span></div>
+          <p className="lede">Think of it as an office. The Private AI Office is the premises. The Node is the power on site, and it is optional. BullNet Infrastructure is the utility behind it. The Swarm is the staff, the Hive is the files, the Vault is the locked room and the Flight Sheet is the work order. Select a component to see what enters it, what leaves it and where its trust boundary sits.</p></header>
+        <div className="panel"><div className="ph mono"><span>FIG. 06 / System architecture</span><span>Select a component</span></div>
           <div className="pb scroll"><ArchDiagram active={c.k} onPick={(k) => setCi(site.components.findIndex((x) => x.k === k))} /></div>
         </div>
         <div className="grid2" style={{ marginTop: '28px' }}>

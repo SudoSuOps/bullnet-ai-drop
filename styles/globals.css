@@ -307,3 +307,24 @@ footer a{text-underline-offset:3px}
 
 /* Grid children may shrink below their content, so a wide table or diagram scrolls inside its panel instead of widening the page. */
 .grid2>*,.gap>*,.gap-s>*{min-width:0}
+
+/* Node section: equipment list, workflow steps, and section-scoped readability to match the example section. */
+#node .steel{color:#A9B3BD;font-size:.95rem}
+#node .mono.brass{font-size:.76rem}
+#node .stages p,#node .steps p,#node .gear p{font-size:.96rem;color:#C9CFD5;line-height:1.5}
+#node dl.kv dt{font-size:.74rem;color:#A9B3BD}
+#node dl.kv dd{font-size:1rem}
+#node dl.kv .approve{color:var(--platinum)}
+#node dl.kv dd.approve{border-left:2px solid var(--platinum);padding-left:12px;font-weight:500}
+#node .note{font-size:1.05rem;color:var(--platinum)}
+#node .journey .stages div{align-content:start}
+.gear{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.gear li{background:var(--obsidian);padding:18px;display:grid;gap:14px;align-content:start;min-width:0}
+.gear .shot img{aspect-ratio:16/9;object-fit:cover;background:#0E141A}
+.gear .shot figcaption{font-size:.72rem;color:#A9B3BD;letter-spacing:.06em;text-transform:uppercase}
+@media(max-width:900px){.gear{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.gear{grid-template-columns:minmax(0,1fr)}}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+@media(max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.steps{grid-template-columns:minmax(0,1fr)}}
+.steps li{background:var(--obsidian);padding:18px;display:grid;gap:6px;align-content:start}

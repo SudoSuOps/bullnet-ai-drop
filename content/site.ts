@@ -275,33 +275,6 @@ export const site = {
       "not": "Anything about the confidential content to the public. Only the digest need be shared."
     }
   ],
-  "nodeTabs": [
-    {
-      "name": "Local inference",
-      "text": "Models run on the appliance. Prompts and documents for supported workflows are processed locally.",
-      "layer": 1
-    },
-    {
-      "name": "Private data processing",
-      "text": "Retrieval runs against local, client-scoped stores. What may be indexed is set by the Vault.",
-      "layer": 2
-    },
-    {
-      "name": "Agent runtime",
-      "text": "Agents execute under their mandates with only the tools the Flight Sheet approves.",
-      "layer": 3
-    },
-    {
-      "name": "Validation",
-      "text": "The calculation engine and test suite run beside the agents, so checks need no outside service.",
-      "layer": 4
-    },
-    {
-      "name": "Governance boundaries",
-      "text": "Identity checks at start-up, audit logging throughout, and offline operation for the workflows that support it.",
-      "layer": 5
-    }
-  ],
   "deploy": [
     {
       "n": "Node in your office",

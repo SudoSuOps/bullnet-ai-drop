@@ -28,6 +28,7 @@ export const scenario = {
     { q: 'What the contract requires', a: 'People, trucks, space, materials, insurance and working capital, on the developer’s schedule.' },
     { q: 'What the business supports today', a: 'Taken from the owner’s own records and numbers, not from assumptions.' },
     { q: 'Where the gaps are', a: 'The list the office is designed around. No gap, no desk.' },
+    { q: 'Does the timing pencil?', a: 'Payroll, material deposits and supplier terms go out on one schedule. The developer’s payments come in on another, less retainage. The Flight Sheet lines the two up against available working capital, because a job can be profitable on paper and still run short of cash in the middle.' },
   ],
   desks: [
     {

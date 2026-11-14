@@ -374,3 +374,4 @@ footer a{text-underline-offset:3px}
 .flow li>span:last-child{color:#C9CFD5;font-size:.98rem}
 .flow li+li::before{content:"";position:absolute;left:-28px;top:50%;width:28px;height:1px;background:var(--steel)}
 @media(max-width:760px){.flow{grid-template-columns:minmax(0,1fr)}.flow li+li::before{left:50%;top:-28px;width:1px;height:28px}}
+#office .shot figcaption{font-size:.76rem;color:#B4BDC6}

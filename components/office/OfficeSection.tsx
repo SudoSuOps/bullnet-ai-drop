@@ -41,12 +41,20 @@ export function OfficeSection() {
       <div className="wrap">
         {/* 01 The office */}
         <header className="sh"><p className="idx mono"><b>04</b> The Private AI Office</p>
-          <h2>Your people. Your agents.<br />One private office.</h2>
-          <p className="lede">The BullNet Private AI Office gives your team one place to work with the AI agents built for your business.</p>
-          <p className="lede">Ask questions, organize projects, prepare reports, and review the work. Each agent has a defined responsibility and access to information you authorize.</p>
-          <p className="lede">BullNet builds the environment, connects the right computing resources, and stays to operate and improve it.</p>
-          <p className="lede" style={{ color: 'var(--platinum)' }}>The agents do the legwork. Your people make the calls.</p></header>
-        <p className="pull" style={{ maxWidth: '26ch' }}>The office is what you get. Everything else is how we deliver it.</p>
+          <h2>Your people. Your agents.<br />One private office.</h2></header>
+        <div className="grid2 journey-open">
+          <figure className="shot">
+            <img src="/assets/office/owner-in-truck.webp" alt="A contractor sits in the cab of his pickup at sunrise, reading his phone, with a hard hat on the dash, rolled drawings on the seat and a steel-framed building going up behind him" width={1600} height={900} loading="lazy" decoding="async" />
+            <figcaption className="mono steel">Illustrative image. Not a client.</figcaption>
+          </figure>
+          <div className="gap">
+            <p className="lede">The BullNet Private AI Office gives your team one place to work with the AI agents built for your business.</p>
+            <p className="lede">Ask questions, organize projects, prepare reports, and review the work. Each agent has a defined responsibility and access to information you authorize.</p>
+            <p className="lede">BullNet builds the environment, connects the right computing resources, and stays to operate and improve it.</p>
+            <p className="lede" style={{ color: 'var(--platinum)' }}>The agents do the legwork. Your people make the calls.</p>
+          </div>
+        </div>
+        <p className="pull" style={{ maxWidth: '26ch', marginTop: 'clamp(28px,4vw,48px)' }}>The office is what you get. Everything else is how we deliver it.</p>
 
         {/* 02 What you receive */}
         <div className="journey">

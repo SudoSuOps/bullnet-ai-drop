@@ -21,7 +21,14 @@ Also add one line for the drop under "Pages" in `public/llms.txt`.
 
 ## Interactive modules
 
-`module` is optional. One kind exists: `exchange`, a like-kind exchange value and equity check (`lib/exchange.ts`, tested in `lib/exchange.test.ts`). A new kind needs a pure function with tests in `lib/`, a client component in `components/pencil/`, and a branch in `DropView.tsx`.
+`module` is optional. Two kinds exist.
+
+- `exchange`: a like-kind exchange value and equity check (`lib/exchange.ts`, tested in `lib/exchange.test.ts`).
+- `multifamily`: a full worked case (`components/pencil/CaseView.tsx`) with a workbench that compares modeled NOI and implied value at two occupancy levels (`lib/multifamily.ts`) and an analytical record for every figure (`lib/pencil-record.ts`). Both are tested. It needs `caseBlocks` on the drop. It does not calculate IRR, debt coverage or any return, and the difference between scenarios is never called profit, equity gain, appreciation or a return. An input stays `INCONCLUSIVE` until a source document supports it. `caseBlocks.image` is optional: use only an image BullNet owns or generated; the page captions it as illustrative.
+
+The method block (`components/pencil/Method.tsx`) appears on the index and on every worked case.
+
+ A new kind needs a pure function with tests in `lib/`, a client component in `components/pencil/`, and a branch in `DropView.tsx`.
 
 ## Artwork
 

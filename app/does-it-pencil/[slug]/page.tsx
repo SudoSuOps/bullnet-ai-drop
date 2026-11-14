@@ -15,7 +15,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const drop = getDrop((await params).slug);
   if (!drop) return {};
-  const title = `${drop.title}: does it pencil?`;
+  const title = /does it pencil/i.test(drop.title) ? drop.title : `${drop.title}: does it pencil?`;
   const url = `/does-it-pencil/${drop.slug}/`;
   return {
     title,
@@ -31,7 +31,7 @@ export default async function DropPage({ params }: { params: Promise<{ slug: str
   const article = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: `${drop.title}: does it pencil?`,
+    headline: /does it pencil/i.test(drop.title) ? drop.title : `${drop.title}: does it pencil?`,
     description: drop.summary,
     datePublished: drop.date,
     mainEntityOfPage: `${SITE_URL}/does-it-pencil/${drop.slug}/`,

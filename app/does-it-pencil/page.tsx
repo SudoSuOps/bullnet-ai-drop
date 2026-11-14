@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Nav } from '@/components/Nav';
 import { Footer } from '@/components/Footer';
 import { drops, formatDate } from '@/content/drops';
+import { Method } from '@/components/pencil/Method';
 
 const DESCRIPTION = 'Does It Pencil? is BullNet’s market intel series: one commercial real estate deal structure per drop, the arithmetic behind it and the questions that decide it.';
 
@@ -22,7 +23,9 @@ export default function DoesItPencil() {
           <div className="wrap gap">
             <p className="idx mono"><b>Market intel</b><span>BullNet</span></p>
             <h1>Does it pencil?</h1>
-            <p className="lede">One deal structure per drop. The setup, the arithmetic and the questions that decide it. Show me the NOI.</p>
+            <p className="hero-tag">The math. The code. The evidence. Your decision.</p>
+            <p className="lede">A good opportunity starts with a question. We work through the information, test the assumptions, run the calculations, and show what supports the result — and what doesn’t.</p>
+            <p className="pull" style={{ maxWidth: 'none' }}>An AI answer is not an underwriting conclusion.</p>
           </div>
         </section>
         <section>
@@ -31,7 +34,7 @@ export default function DoesItPencil() {
               {drops.map((d) => (
                 <li key={d.slug}>
                   <Link href={`/does-it-pencil/${d.slug}/`}>
-                    <span className="mono steel">Drop {d.number} / {d.practice} / <time dateTime={d.date}>{formatDate(d.date)}</time></span>
+                    <span className="mono steel">Drop {d.number}{d.caseBlocks ? ` / ${d.caseBlocks.label}` : ''} / {d.practice} / <time dateTime={d.date}>{formatDate(d.date)}</time></span>
                     <h2>{d.title}</h2>
                     <p>{d.summary}</p>
                     <span className="mono">Read the drop</span>
@@ -39,6 +42,7 @@ export default function DoesItPencil() {
                 </li>
               ))}
             </ol>
+            <Method />
             <p className="steel" style={{ fontSize: '.86rem' }}>Every drop is illustrative underwriting on stated assumptions. None is a real transaction, a market survey or a recommendation. Not investment, tax or legal advice.</p>
           </div>
         </section>

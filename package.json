@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "typecheck": "tsc --noEmit",
-    "test": "node --test --experimental-strip-types lib/validate.test.ts lib/exchange.test.ts tests/intake.test.ts lib/equipment.test.ts"
+    "test": "node --test --experimental-strip-types lib/validate.test.ts lib/exchange.test.ts tests/intake.test.ts lib/equipment.test.ts lib/multifamily.test.ts lib/pencil-record.test.ts"
   },
   "engines": {
     "node": ">=22"

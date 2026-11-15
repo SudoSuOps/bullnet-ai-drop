@@ -22,6 +22,7 @@ export const structuredData = {
       slogan: 'Your business. Your data. Your private AI office.',
       email: 'build@bullnet.ai',
       telephone: '+1-561-532-7120',
+      address: { '@type': 'PostalAddress', addressLocality: 'Jupiter', addressRegion: 'FL', addressCountry: 'US' },
       sameAs: ['https://x.com/bullnetai'],
       contactPoint: { '@type': 'ContactPoint', contactType: 'sales', email: 'build@bullnet.ai', telephone: '+1-561-532-7120' },
       knowsAbout: [

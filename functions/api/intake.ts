@@ -5,7 +5,10 @@
  * Secrets and settings live in Cloudflare (Pages project → Settings → Variables and Secrets), never in this repo:
  *   RESEND_API_KEY  required, secret
  *   INTAKE_TO       optional, defaults to build@bullnet.ai
- *   INTAKE_FROM     optional, defaults to "BullNet Flight Sheet <flightsheet@bullnet.ai>" (must be on the verified domain)
+ *   INTAKE_FROM     optional, Flight Sheet sender, defaults to "BullNet Flight Sheet <flightsheet@bullnet.ai>" (must be on the verified domain)
+ *   HIVE_FROM       optional, sender of both Hive emails, defaults to "Hive Capital Markets <hive@bullnet.ai>" (must be on the verified domain)
+ *   HIVE_REPLY_TO   optional, where a client's reply to the acknowledgment goes, defaults to hive@bullnet.ai
+ *   HIVE_ACK        optional, set to "off" to stop the acknowledgment to the client without a deploy
  *
  * Nothing is stored here. The request is validated, forwarded as one email and discarded.
  *
@@ -14,10 +17,17 @@
  *   - the Hive Capital Markets intakes (`form: 'hive-cre' | 'hive-equipment'`), validated against lib/hive-intake.ts.
  * A Hive intake gets a reference and a timestamp so the visitor and the inbox can refer to the same email.
  * That reference identifies an email. It is not a case record: no database exists yet.
+ *
+ * A Hive intake sends up to three emails, in this order:
+ *   1. the internal notice to BullNet. If this fails the intake fails and nothing else is sent;
+ *   2. a fixed-template acknowledgment to the address the visitor gave (lib/hive-ack.ts). Its failure does not fail the intake;
+ *   3. only if 2 failed, a short internal notice saying the client was not acknowledged.
+ * Because 2 mails an address typed into a public form, /api/intake must sit behind a Cloudflare rate limiting rule.
  */
+import { ackEmail } from '../../lib/hive-ack.ts';
 import { CONSENT_TEXT, CONSENT_VERSION, HIVE_FORMS, isHiveForm, makeRef, validateHive, type HiveForm } from '../../lib/hive-intake.ts';
 
-interface Env { RESEND_API_KEY?: string; INTAKE_TO?: string; INTAKE_FROM?: string }
+interface Env { RESEND_API_KEY?: string; INTAKE_TO?: string; INTAKE_FROM?: string; HIVE_FROM?: string; HIVE_REPLY_TO?: string; HIVE_ACK?: string }
 interface Context { request: Request; env: Env }
 
 const FIELDS = [
@@ -90,16 +100,37 @@ export async function onRequestPost({ request, env }: Context): Promise<Response
   return res.ok ? json(200, { ok: true }) : json(502, { ok: false, error: 'send_failed' });
 }
 
-/** Hive Capital Markets intake: validate, stamp, email. Reports success only when the mail provider accepted the message. */
+/** One message through Resend. Resolves false on a refusal or a network failure; never throws. */
+async function send(key: string, message: Record<string, unknown>): Promise<boolean> {
+  try {
+    const res = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: { authorization: `Bearer ${key}`, 'content-type': 'application/json' },
+      body: JSON.stringify(message),
+    });
+    return res.ok;
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Hive Capital Markets intake: validate, stamp, email BullNet, then acknowledge the client.
+ * Reports success only when the mail provider accepted the internal notice. `acknowledged` says whether the client's copy was accepted too.
+ */
 async function hiveIntake(form: HiveForm, data: Record<string, unknown>, env: Env): Promise<Response> {
   const checked = validateHive(form, data);
   if (!checked.ok) return json(400, { ok: false, error: checked.error, field: checked.field });
-  if (!env.RESEND_API_KEY) return json(503, { ok: false, error: 'not_configured' });
+  const key = env.RESEND_API_KEY;
+  if (!key) return json(503, { ok: false, error: 'not_configured' });
 
   const { title, tag, fields } = HIVE_FORMS[form];
   const { clean } = checked;
   const now = new Date();
   const ref = makeRef(now, crypto.getRandomValues(new Uint8Array(6)));
+  const from = env.HIVE_FROM ?? 'Hive Capital Markets <hive@bullnet.ai>';
+  const inbox = env.INTAKE_TO ?? 'build@bullnet.ai';
+  const ackOn = env.HIVE_ACK !== 'off';
   const text = [
     `New Hive Capital Markets intake: ${title}`,
     `Reference: ${ref}`,
@@ -111,21 +142,29 @@ async function hiveIntake(form: HiveForm, data: Record<string, unknown>, env: En
     `Consent wording: ${CONSENT_TEXT}`,
     '',
     'Research and review only. Nothing here authorizes contact with a lender or any other third party.',
+    ackOn
+      ? 'An acknowledgment with this reference is sent to the requester after this notice. If it fails, a second notice follows.'
+      : 'No acknowledgment was sent to the requester: it is switched off (HIVE_ACK).',
     'Sent by the site intake form. No documents were collected. Reply to this email to answer the requester.',
   ].join('\n');
 
-  const res = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: { authorization: `Bearer ${env.RESEND_API_KEY}`, 'content-type': 'application/json' },
-    body: JSON.stringify({
-      from: env.INTAKE_FROM ?? 'BullNet Flight Sheet <flightsheet@bullnet.ai>',
-      to: [env.INTAKE_TO ?? 'build@bullnet.ai'],
-      reply_to: clean['Business email'],
-      subject: `[Hive ${tag}] ${ref}: ${clean.Company}`.slice(0, 150),
-      text,
-    }),
-  });
-  return res.ok ? json(200, { ok: true, ref, received: now.toISOString() }) : json(502, { ok: false, error: 'send_failed' });
+  const subject = `[Hive ${tag}] ${ref}: ${clean.Company}`.slice(0, 150);
+  if (!(await send(key, { from, to: [inbox], reply_to: clean['Business email'], subject, text }))) return json(502, { ok: false, error: 'send_failed' });
+
+  let acknowledged = false;
+  if (ackOn) {
+    acknowledged = await send(key, { from, to: [clean['Business email']], reply_to: env.HIVE_REPLY_TO ?? 'hive@bullnet.ai', ...ackEmail(form, ref) });
+    if (!acknowledged) {
+      await send(key, {
+        from,
+        to: [inbox],
+        reply_to: clean['Business email'],
+        subject: `[Hive ${tag}] ${ref}: ACKNOWLEDGMENT NOT SENT`,
+        text: `The intake ${ref} was received and its notice was sent to this inbox.\nThe acknowledgment to the requester was not accepted by the mail provider, so the requester has only the on-screen reference.\nReply to this email to reach the requester directly.`,
+      });
+    }
+  }
+  return json(200, { ok: true, ref, received: now.toISOString(), acknowledged });
 }
 
 /** Any other method on this path. */

@@ -11,7 +11,7 @@ const SERVICES: { form: HiveForm; label: string; blurb: string }[] = [
   { form: 'hive-equipment', label: 'Equipment finance', blurb: 'Equipment to acquire, lease or replace.' },
 ];
 type Control = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement;
-type Outcome = { kind: 'draft' | 'sent' | 'error' | 'sensitive'; text: string; ref?: string };
+type Outcome = { kind: 'draft' | 'sent' | 'error' | 'sensitive'; text: string; ref?: string; ack?: boolean };
 const small = { textTransform: 'none', letterSpacing: '0', fontFamily: 'var(--body)', fontSize: '.84rem' } as const;
 
 function Field({ f, id, error }: { f: FieldSpec; id: string; error?: string }) {
@@ -95,9 +95,9 @@ export function HiveIntake() {
     setBusy(true);
     try {
       const res = await fetch(ENDPOINT, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ form, ...fields, website: trap }) });
-      const body = (await res.json().catch(() => ({}))) as { ok?: boolean; ref?: string; error?: string };
+      const body = (await res.json().catch(() => ({}))) as { ok?: boolean; ref?: string; error?: string; acknowledged?: boolean };
       // "Sent" is shown only when the server confirms the message was accepted and returns its reference.
-      if (res.ok && body.ok && body.ref) setOut({ kind: 'sent', text, ref: body.ref });
+      if (res.ok && body.ok && body.ref) setOut({ kind: 'sent', text, ref: body.ref, ack: body.acknowledged === true });
       else setOut({ kind: body.error === 'sensitive_data' ? 'sensitive' : 'error', text });
     } catch {
       setOut({ kind: 'error', text });
@@ -165,7 +165,7 @@ export function HiveIntake() {
               {out.kind === 'sensitive' && <p style={{ color: 'var(--fail)' }}><strong>Not sent.</strong> One of the answers looks like a Social Security number. Remove it and send again. We do not collect it here.</p>}
               {out.kind === 'sent' && (
                 <>
-                  <p><strong>Sent.</strong> Your intake was emailed to BullNet. Reference <strong className="mono">{out.ref}</strong>. Keep it: quote it when you follow up.</p>
+                  <p><strong>Sent.</strong> Your intake was emailed to BullNet. Reference <strong className="mono">{out.ref}</strong>. Keep it: quote it when you follow up.{out.ack && ' A confirmation with this reference was emailed to the address you gave.'}</p>
                   <p className="steel" style={small}>A person reads every intake. Nothing has been sent to a lender or any other third party, and no documents were collected.</p>
                 </>
               )}

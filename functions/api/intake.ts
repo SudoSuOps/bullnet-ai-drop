@@ -7,7 +7,7 @@
  *   INTAKE_TO       optional, defaults to build@bullnet.ai
  *   INTAKE_FROM     optional, Flight Sheet sender, defaults to "BullNet Flight Sheet <flightsheet@bullnet.ai>" (must be on the verified domain)
  *   HIVE_FROM       optional, sender of both Hive emails, defaults to "Hive Capital Markets <hive@bullnet.ai>" (must be on the verified domain)
- *   HIVE_REPLY_TO   optional, where a client's reply to the acknowledgment goes, defaults to INTAKE_TO, then build@bullnet.ai
+ *   HIVE_REPLY_TO   optional, where a client's reply to the acknowledgment goes, defaults to hive@bullnet.ai
  *   HIVE_ACK        optional, set to "off" to stop the acknowledgment to the client without a deploy
  *
  * Nothing is stored here. The request is validated, forwarded as one email and discarded.
@@ -153,7 +153,7 @@ async function hiveIntake(form: HiveForm, data: Record<string, unknown>, env: En
 
   let acknowledged = false;
   if (ackOn) {
-    acknowledged = await send(key, { from, to: [clean['Business email']], reply_to: env.HIVE_REPLY_TO ?? inbox, ...ackEmail(form, ref) });
+    acknowledged = await send(key, { from, to: [clean['Business email']], reply_to: env.HIVE_REPLY_TO ?? 'hive@bullnet.ai', ...ackEmail(form, ref) });
     if (!acknowledged) {
       await send(key, {
         from,

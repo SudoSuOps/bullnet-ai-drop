@@ -135,7 +135,7 @@ test('the client is acknowledged from the Hive sender, with the same reference a
     assert.deepEqual(ack.to, ['test@example.com']);
     assert.equal(ack.from, 'Hive Capital Markets <hive@bullnet.ai>');
     assert.equal(notice.from, 'Hive Capital Markets <hive@bullnet.ai>');
-    assert.equal(ack.reply_to, 'build@bullnet.ai');
+    assert.equal(ack.reply_to, 'hive@bullnet.ai');
     assert.equal(ack.subject, `We received your intake: ${out.ref}`);
     for (const part of [ack.subject, ack.text, ack.html]) {
       assert.ok(part.includes(out.ref));
@@ -191,8 +191,8 @@ test('no acknowledgment goes out when the internal notice fails, or when it is s
 
 test('sender and reply address can be set from the environment', async () => {
   const calls = stubFetch(200);
-  await onRequestPost({ request: req(cre), env: { ...env, HIVE_FROM: 'Hive <intake@bullnet.ai>', HIVE_REPLY_TO: 'hive@bullnet.ai', INTAKE_TO: 'ops@bullnet.ai' } });
+  await onRequestPost({ request: req(cre), env: { ...env, HIVE_FROM: 'Hive <intake@bullnet.ai>', HIVE_REPLY_TO: 'desk@bullnet.ai', INTAKE_TO: 'ops@bullnet.ai' } });
   assert.deepEqual(sentAt(calls, 0).to, ['ops@bullnet.ai']);
   assert.equal(sentAt(calls, 1).from, 'Hive <intake@bullnet.ai>');
-  assert.equal(sentAt(calls, 1).reply_to, 'hive@bullnet.ai');
+  assert.equal(sentAt(calls, 1).reply_to, 'desk@bullnet.ai');
 });

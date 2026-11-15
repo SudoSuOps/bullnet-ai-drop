@@ -37,6 +37,8 @@ One-time setup in the Pages project → Settings → Variables and Secrets (Prod
 
 Redeploy after adding the secret. Until the key is set the function answers 503 and the form tells the visitor the request was not sent.
 
+The same function receives the Hive Capital Markets intakes (`form: 'hive-cre'` or `'hive-equipment'`), validated against `lib/hive-intake.ts`. Each gets a reference and a timestamp in the email. It is still an email, not a stored case.
+
 Protections in the function: same-origin check, JSON only, size and length limits, required-field and email validation, a honeypot field, and header-injection stripping. It stores nothing.
 
 Recommended next: a Cloudflare rate limiting rule on `/api/intake` (for example 5 requests per minute per IP), and Turnstile if spam appears.

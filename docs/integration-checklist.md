@@ -24,6 +24,9 @@ Nothing below is done by the code in this repository. Each item needs a named ow
 - [ ] Counsel to confirm the lender-fee disclosure now on the site ("A lender may pay BullNet a fee when a financing closes, and we tell you when that applies") and the process for telling each client
 - [ ] Confirm no fee depends on a property sale or lease, so "not a broker" holds in practice
 - [ ] Cloudflare: add hivecapitalmarkets.com and a 301 Redirect Rule to `https://bullnet.ai/hive-capital-markets/`
+- [ ] Hive intake (Sprint 1): founder review of the preview, one real test intake, counsel review of consent wording `hive-intake-consent-v1`. See `docs/hive-capital-markets.md`
+- [ ] Hive case records (Sprint 2): D1 binding `HIVE_DB`. Until then an intake is an email, not a case
+- [ ] Decide where the back office lives. This repository is public
 
 ## Security and deployment validation
 - [x] Intake endpoint built (`/api/intake`, Resend). Needs `RESEND_API_KEY` set as a secret in Cloudflare

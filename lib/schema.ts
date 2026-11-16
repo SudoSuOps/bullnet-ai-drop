@@ -19,7 +19,7 @@ export const structuredData = {
       url: SITE_URL,
       logo: `${SITE_URL}/assets/brand/bullnet-b-app-icon.svg`,
       description: DESCRIPTION,
-      slogan: 'Your business. Your data. Your private AI office.',
+      slogan: 'We build private AI offices.',
       email: 'build@bullnet.ai',
       telephone: '+1-561-532-7120',
       address: { '@type': 'PostalAddress', addressLocality: 'Jupiter', addressRegion: 'FL', addressCountry: 'US' },

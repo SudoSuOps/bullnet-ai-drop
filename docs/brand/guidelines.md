@@ -1,13 +1,13 @@
 # Brand guidelines (locked 2026-11-13)
 
-## Positioning (updated 2026-11-14)
+## Positioning (updated 2026-11-16)
 
 **BullNet builds private AI offices to suit.** It is a service provider for small and mid-size companies that run on real estate and equipment.
 
 | Line | Text |
 | --- | --- |
-| Headline | Your business. Your data. Your private AI office. |
-| Support | Built to suit. Operated with purpose. |
+| Headline | We build private AI offices. |
+| Support | Built to suit. Locally controlled. Privately connected. |
 | Descriptor | Build-to-suit private AI offices |
 | Thesis | The last mile of intelligence. |
 | Proof | 30 years in the trenches. Built for the agent economy. |

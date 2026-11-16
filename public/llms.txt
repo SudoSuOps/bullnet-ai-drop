@@ -1,6 +1,6 @@
 # BullNet
 
-> BullNet builds private AI offices to suit. It custom-builds AI agents for small and mid-size companies that run on real estate and equipment (warehouse operators, contractors, distributors), manages the infrastructure, organizes the data and works out the math on hardware and equipment purchases. It runs on bare-metal compute the founder owns and operates. A person approves every consequential decision. Headline: Your business. Your data. Your private AI office. Tagline: Built to suit. Operated with purpose.
+> BullNet builds private AI offices to suit. It custom-builds AI agents for small and mid-size companies that run on real estate and equipment (warehouse operators, contractors, distributors), manages the infrastructure, organizes the data and works out the math on hardware and equipment purchases. It runs on bare-metal compute the founder owns and operates. A person approves every consequential decision. Headline: We build private AI offices. Tagline: Built to suit. Locally controlled. Privately connected.
 
 Website: https://bullnet.ai
 Contact: build@bullnet.ai, +1 561 532 7120, https://x.com/bullnetai
